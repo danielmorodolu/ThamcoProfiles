@@ -5,6 +5,7 @@ using ProfileService.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using ThamcoProfiles.Services.Products;
 
 namespace ProfileService.Controllers;
 
@@ -12,16 +13,32 @@ namespace ProfileService.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private readonly IProductService _productService;
+    public HomeController(ILogger<HomeController> logger, IProductService productService)
     {
         _logger = logger;
+        _productService = productService;
     }
+    
 
    
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        IEnumerable<ProductDto> products = null!;
+
+            try{
+
+                products = await _productService.GetProductsAsync();
+
+            }
+            catch (Exception ex){
+
+                _logger.LogWarning($"failure to access product service : {ex.Message}");
+                products= Array.Empty<ProductDto>();
+
+            }
+
+            return View(products);
     }
 
     public IActionResult Login()

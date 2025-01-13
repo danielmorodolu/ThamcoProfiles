@@ -106,3 +106,4 @@
 /Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/ProfileService.csproj.AssemblyReference.cache
 /Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/ProfileService.sourcelink.json
 /Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/ProfileS.B2CACD27.Up2Date
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Newtonsoft.Json.dll
