@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using ThamcoProfiles.Data;
 using ThamcoProfiles.Services.Products;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -47,6 +49,30 @@ builder.Services.AddAuthentication(options =>
         }
     };
 });  
+
+builder.Services.AddDbContext<ProfileContext>(options =>
+{
+    if (builder.Environment.IsDevelopment())
+    {
+        var folder = Environment.SpecialFolder.LocalApplicationData;
+        var path = Environment.GetFolderPath(folder);
+        var dbPath = System.IO.Path.Join(path, "profile.db");
+        options.UseSqlite($"Data Source={dbPath}");
+        options.EnableDetailedErrors();
+        options.EnableSensitiveDataLogging();
+    }
+    else
+    {
+         var cs = builder.Configuration.GetConnectionString("ProfileContext");
+        options.UseSqlServer(cs, sqlServerOptionsAction: sqlOptions =>
+            sqlOptions.EnableRetryOnFailure(
+                maxRetryCount: 5,
+                maxRetryDelay: TimeSpan.FromSeconds(6),
+                errorNumbersToAdd: null
+            )
+        );
+    }
+});
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
