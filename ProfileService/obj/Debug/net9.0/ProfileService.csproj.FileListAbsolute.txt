@@ -247,3 +247,7 @@
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Http.Polly.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Polly.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Polly.Core.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Polly.Extensions.Http.dll

@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using ThamcoProfiles.Data;
 using ThamcoProfiles.Services.Products;
+using Polly;
+using Polly.Extensions.Http;
+using System.Net.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductService, FakeProductService>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -75,6 +79,19 @@ builder.Services.AddDbContext<ProfileContext>(options =>
 });
 builder.Services.AddAuthorization();
 
+if(builder.Environment.IsDevelopment()){
+    builder.Services.AddSingleton<IProductService, FakeProductService>();
+    
+}
+else {
+
+   builder.Services.AddHttpClient<IProductService, ProductService>()
+                    .AddPolicyHandler(GetRetryPolicy())
+                    .AddPolicyHandler(GetCircuitBreakerPolicy());
+
+    
+}
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -101,3 +118,19 @@ app.MapControllerRoute(
 
 
 app.Run();
+
+IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(5, retryAttempt =>
+            TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+}
+
+IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .CircuitBreakerAsync(5, TimeSpan.FromSeconds(30));
+}
