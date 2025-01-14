@@ -42,6 +42,8 @@ builder.Services.AddDbContext<ProfileContext>(options =>
     }
     options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 });
+
+
 builder.Services.AddScoped<IProductService, ProductService>();
 // Configure conditional dependency injection
 if (builder.Environment.IsDevelopment())
