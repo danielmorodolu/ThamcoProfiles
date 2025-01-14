@@ -262,3 +262,4 @@
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/ProfileService.MvcApplicationPartsAssemblyInfo.cs
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/appsettings.Production.json
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Logging.AzureAppServices.dll

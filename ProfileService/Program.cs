@@ -9,6 +9,7 @@ using ProfileService.Services.Products;
 using ProfileService.Services.Profiling;
 using System.Net.Http;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.Extensions.Logging.AzureAppServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +24,6 @@ builder.Services.AddDbContext<ProfileContext>(options =>
 {
     if (builder.Environment.IsDevelopment())
     {
-        // Use SQLite for development
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
         var dbPath = System.IO.Path.Join(path, "profile.db");
@@ -33,12 +33,14 @@ builder.Services.AddDbContext<ProfileContext>(options =>
     }
     else
     {
-        // Use SQL Server for production
         var connectionString = builder.Configuration.GetConnectionString("ProfileContext");
         options.UseSqlServer(connectionString, sqlOptions =>
-        {
-            sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(6), errorNumbersToAdd: null);
-        });
+{
+    sqlOptions.EnableRetryOnFailure(
+        maxRetryCount: 5, 
+        maxRetryDelay: TimeSpan.FromSeconds(6),
+        errorNumbersToAdd: null); // Providing null for errorNumbersToAdd
+});
     }
     options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 });
@@ -46,18 +48,15 @@ builder.Services.AddDbContext<ProfileContext>(options =>
 // Configure conditional dependency injection for IProductService
 if (builder.Environment.IsDevelopment())
 {
-    // Use FakeProductService in development
     builder.Services.AddSingleton<IProductService, FakeProductService>();
 }
 else
 {
-    // Use ProductService with HttpClient in production
     builder.Services.AddHttpClient<IProductService, ProductService>()
         .AddPolicyHandler(GetRetryPolicy())
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 }
 
-// Configure the real profile service
 builder.Services.AddScoped<IProfileService, RealProfileService>();
 
 // Configure cookie policy
@@ -88,7 +87,6 @@ builder.Services.AddAuthentication(options =>
     options.Scope.Add("openid");
     options.Scope.Add("profile");
     options.Scope.Add("email");
-    options.ClaimsIssuer = "Auth0";
 
     options.Events = new OpenIdConnectEvents
     {
@@ -113,7 +111,12 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Middleware pipeline configuration
+if (!app.Environment.IsDevelopment())
+{
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+    builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+}
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -124,24 +127,21 @@ else
     app.UseDeveloperExceptionPage();
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
-
-app.UseAuthentication();
-app.UseAuthorization();
-
 app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 });
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 
-app.UseSwagger();
-app.UseSwaggerUI();
-
-// Log resolved services for debugging
-var productServiceType = app.Services.GetRequiredService<IProductService>().GetType().Name;
-Console.WriteLine($"Resolved IProductService: {productServiceType}");
+if (builder.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 // Default route configuration
 app.MapControllerRoute(
@@ -152,7 +152,6 @@ app.MapControllers();
 
 app.Run();
 
-// Define retry policy
 IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 {
     return HttpPolicyExtensions
@@ -162,7 +161,6 @@ IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
             TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
 }
 
-// Define circuit breaker policy
 IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 {
     return HttpPolicyExtensions
