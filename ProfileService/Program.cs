@@ -57,6 +57,9 @@ else
 
 builder.Services.AddScoped<IProfileService, ProfileService.Services.Profiling.RealProfileService>();
 
+
+
+
 // Configure authentication
 builder.Services.AddAuthentication(options =>
 {
@@ -99,10 +102,15 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
+//builder.WebHost.UseUrls("http://0.0.0.0:8080");
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+
+app.MapControllers();
+// Remove this line and move it to the end of the file
+
+
 
 // Configure middleware pipeline
 if (!app.Environment.IsDevelopment())
@@ -125,13 +133,23 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
+app.Use(async (context, next) =>
+{
+    Console.WriteLine($"Request: {context.Request.Method} {context.Request.Path}");
+    await next();
+});
+app.MapControllers();
+
 app.UseAuthorization();
+app.MapControllers();
 app.UseSwagger();
 app.UseSwaggerUI();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();
 
 app.Run();
 
