@@ -131,17 +131,15 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseForwardedHeaders(new ForwardedHeadersOptions
-{
-    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-});
+//app.UseForwardedHeaders(new ForwardedHeadersOptions
+//{
+   // ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+//});
 
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// Log resolved services for debugging
-var productServiceType = app.Services.GetRequiredService<IProductService>().GetType().Name;
-Console.WriteLine($"Resolved IProductService: {productServiceType}");
+
 
 // Default route configuration
 app.MapControllerRoute(
