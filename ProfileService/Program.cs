@@ -143,16 +143,12 @@ app.UseSwaggerUI();
 var productServiceType = app.Services.GetRequiredService<IProductService>().GetType().Name;
 Console.WriteLine($"Resolved IProductService: {productServiceType}");
 
-// Endpoint configuration
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
-
 // Default route configuration
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllers();
 
 app.Run();
 
