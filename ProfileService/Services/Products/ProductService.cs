@@ -3,9 +3,9 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using Newtonsoft.Json;
-using ThamcoProfiles.Services.Products;
+using ProfileService.Services.Products;
 
-namespace ThamcoProfiles.Services.Products;
+namespace ProfileService.Services.Products;
 
 public class ProductService : IProductService
 {

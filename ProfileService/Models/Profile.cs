@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ThamcoProfiles.Models;
+namespace ProfileService.Models;
 
 public class Profile{
     public int Id{get;set;}

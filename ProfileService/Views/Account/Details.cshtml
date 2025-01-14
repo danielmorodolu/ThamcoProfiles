@@ -1,0 +1,69 @@
+@model ProfileService.Models.Profile
+
+@{
+    
+    ViewData["PageTitle"] = "User Details";
+    ViewData["Controller"] = "Account";
+    ViewData["Action"] = "Details";
+}
+
+<!-- Reference External CSS -->
+<link rel="stylesheet" href="~/css/profile-details.css" />
+
+<body>
+    <div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>@Model.FirstName @Model.LastName</h3>
+            <p>@Model.Email</p>
+        </div>
+        <div class="card-body">
+            <p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+            <p><strong>Payment Address:</strong> @Model.PaymentAddress</p>
+            <a asp-action="EditField" asp-route-field="FirstName" class="btn btn-primary">Edit Profile</a>
+            <a asp-action="Delete" class="btn btn-danger">Delete Account</a>
+        </div>
+    </div>
+</div>
+    <div class="main-content py-5">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <!-- User Details Card -->
+                <div class="col-md-10">
+                    <div class="card border-0 rounded-3 shadow">
+                        <div class="card-header bg-light">
+                            <h3 class="text-dark">@Model.Email</h3>
+                        </div>
+                        <div class="card-body bg-white">
+                            <!-- User Details List -->
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span><strong>First Name:</strong> @Model.FirstName</span>
+                                    <a asp-action="EditField" asp-route-field="FirstName" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span><strong>Last Name:</strong> @Model.LastName</span>
+                                    <a asp-action="EditField" asp-route-field="LastName" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span><strong>Phone Number:</strong> @Model.PhoneNumber</span>
+                                    <a asp-action="EditField" asp-route-field="PhoneNumber" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span><strong>Payment Address:</strong> @Model.PaymentAddress</span>
+                                    <a asp-action="EditField" asp-route-field="PaymentAddress" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="mt-4 d-flex justify-content-between">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-dark">Go to Home</a>
+                        <a asp-controller="Account" asp-action="Delete" class="btn btn-outline-danger">Delete Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,117 @@
+/* /wwwroot/css/profile-details.css */
+
+/* General Body Styling */
+body {
+    background-color: #243a5e; /* Cool-toned blue background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, professional font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Card Styling */
+.card {
+    border: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.card-header {
+    background-color: #e4eff7; /* Light pastel blue */
+    border-bottom: 2px solid #cbd5e1;
+    padding: 20px;
+}
+
+.card-header h3, 
+.card-header h4 {
+    color: #243a5e; /* Deep blue */
+    margin: 0;
+}
+
+.card-body {
+    background-color: #f9fbfd; /* Very light blue */
+    padding: 20px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #5a9bd4; /* Soft blue */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4b86c3; /* Darker blue */
+}
+
+.btn-danger {
+    background-color: #e63946; /* Vivid red */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #cc2e3b; /* Darker red */
+}
+
+/* Small Button */
+.btn-sm {
+    font-size: 0.875rem;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+
+/* User Information List */
+.profile-info {
+    display: grid;
+    gap: 20px; /* Space between list items */
+}
+
+.profile-info-item {
+    padding: 15px;
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #e4e4e4; /* Light gray border */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.profile-info-item:hover {
+    background-color: #eef4f9; /* Subtle highlight on hover */
+}
+
+.profile-info-item .btn {
+    margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start; /* Adjust alignment for smaller screens */
+        padding-top: 20px;
+    }
+
+    .card-header h3,
+    .card-header h4 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary, 
+    .btn-danger {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

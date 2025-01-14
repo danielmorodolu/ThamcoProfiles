@@ -2,7 +2,23 @@
   "Files": [
     {
       "Id": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/projectbundle/ProfileService.bundle.scp.css",
-      "PackagePath": "staticwebassets/ProfileService.3prynwsgv6.bundle.scp.css"
+      "PackagePath": "staticwebassets/ProfileService.kxh3ryutgk.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/delete.css",
+      "PackagePath": "staticwebassets/css/delete.css"
+    },
+    {
+      "Id": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/products.css",
+      "PackagePath": "staticwebassets/css/products.css"
+    },
+    {
+      "Id": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-details.css",
+      "PackagePath": "staticwebassets/css/profile-details.css"
+    },
+    {
+      "Id": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-edit.css",
+      "PackagePath": "staticwebassets/css/profile-edit.css"
     },
     {
       "Id": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/site.css",
@@ -11,6 +27,10 @@
     {
       "Id": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/js/Editfield.js",
+      "PackagePath": "staticwebassets/js/Editfield.js"
     },
     {
       "Id": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/js/site.js",

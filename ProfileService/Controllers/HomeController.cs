@@ -5,43 +5,41 @@ using ProfileService.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using ThamcoProfiles.Services.Products;
+using ProfileService.Services.Products;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
 
-namespace ProfileService.Controllers;
-
-
-public class HomeController : Controller
+namespace ProfileService.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-    private readonly IProductService _productService;
-    public HomeController(ILogger<HomeController> logger, IProductService productService)
+    public class HomeController : Controller
     {
-        _logger = logger;
-        _productService = productService;
-    }
-    
+        private readonly ILogger<HomeController> _logger;
+        private readonly IProductService _productService;
+        private readonly ICompositeViewEngine _viewEngine;
 
-   
-    public async Task<IActionResult> Index()
-    {
-        IEnumerable<ProductDto> products = null!;
+        public HomeController(ILogger<HomeController> logger, IProductService productService, ICompositeViewEngine viewEngine)
+        {
+            _logger = logger;
+            _productService = productService;
+            _viewEngine = viewEngine;
+        }
 
-            try{
-
-                products = await _productService.GetProductsAsync();
-
+        // Homepage: Displays a list of products
+        public async Task<IActionResult> Index()
+        {
+            try
+            {
+                var products = await _productService.GetProductsAsync(); // Ensure the service returns a valid list
+                return View(products);
             }
-            catch (Exception ex){
-
-                _logger.LogWarning($"failure to access product service : {ex.Message}");
-                products= Array.Empty<ProductDto>();
-
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error fetching products: {ex.Message}");
+                return View(new List<ProductDto>()); // Pass an empty list on error
             }
+        }
 
-            return View(products);
-    }
-
-    public IActionResult Login()
+        // Login action
+        public IActionResult Login()
         {
             try
             {
@@ -53,7 +51,8 @@ public class HomeController : Controller
                 return View("Error", new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
             }
         }
-        // Logout logic
+
+        // Logout action
         public async Task Logout()
         {
             try
@@ -62,26 +61,67 @@ public class HomeController : Controller
                 await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
                 await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme, new AuthenticationProperties
                 {
-                    // Redirect to the home page after logout.
-                    RedirectUri = Url.Action("Index", "Home")
+                    RedirectUri = Url.Action("Index", "Home") // Redirect to the homepage after logout
                 });
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Error in Logout: {ex.Message}");
             }
-
-            // Redirect to Home page or Login page after logout
         }
 
-    public IActionResult Privacy()
+        // Privacy policy page
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        // Error handling
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+[Route("Home/Search")]
+public async Task<IActionResult> Search(string query)
+{
+    IEnumerable<ProductDto> products = null!;
+
+    try
     {
-        return View();
+        // Get products from the service
+        products = await _productService.GetProductsAsync();
+
+        // Safely filter products based on the query
+        if (!string.IsNullOrEmpty(query))
+        {
+            products = products
+                ?.Where(p => p?.Name?.Contains(query, StringComparison.OrdinalIgnoreCase) == true) // Null-safe
+                ?? Enumerable.Empty<ProductDto>();
+        }
+    }
+    catch (Exception ex)
+    {
+        _logger.LogWarning($"Failed to access product service: {ex.Message}");
+        products = Enumerable.Empty<ProductDto>(); // Fallback to an empty list
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    if (!ViewExists("Search"))
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View("Error");
+    }
+    
+    return View(products);
+}
+
+
+        // Utility method to check if a view exists
+        private bool ViewExists(string viewName)
+        {
+            var result = _viewEngine.FindView(ControllerContext, viewName, false);
+            return result.View != null;
+        }
     }
 }

@@ -1,0 +1,120 @@
+/* /wwwroot/css/profile-form.css */
+
+/* Body Styling */
+body {
+    background: #e7edf3; /* Softer background tone */
+    color: #2c3e50; /* Muted dark text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, professional font */
+}
+
+/* Form Container */
+.container {
+    max-width: 650px; /* Adjusted width for better readability */
+    margin: 50px auto; /* Centered with auto margins */
+    background: #ffffff; /* Bright white background for contrast */
+    padding: 25px 20px; /* Internal padding for form elements */
+    border-radius: 12px; /* Subtle rounding of corners */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08); /* Gentle shadow effect */
+}
+
+/* Title */
+h2 {
+    font-size: 1.8rem;
+    color: #2a506f; /* Cool blue */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Label Styling */
+.form-group label {
+    font-size: 1rem;
+    color: #7b8a97; /* Neutral tone */
+    margin-bottom: 6px;
+    display: block; /* Ensures alignment with inputs */
+}
+
+/* Input Fields */
+input.form-control {
+    background: #f5f7fa; /* Light gray input background */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 12px;
+    font-size: 1rem;
+    margin-bottom: 18px; /* Adds space between inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus Effect */
+input.form-control:focus {
+    border-color: #2a506f; /* Highlighted border */
+    box-shadow: 0 0 5px rgba(42, 80, 111, 0.4); /* Slight glow */
+}
+
+/* Buttons */
+.submit-button {
+    background: #2a506f; /* Primary button color */
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 20px; /* Rounded corners for modern feel */
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%; /* Full width for easy access */
+}
+
+.submit-button:hover {
+    background: #23405c; /* Darker tone on hover */
+}
+
+/* Cancel Button */
+a.cancel-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #dfe7ed; /* Soft gray background */
+    color: #2a506f; /* Matches primary button color */
+    padding: 12px 28px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+    width: 100%;
+}
+
+a.cancel-link:hover {
+    background: #c9d5de; /* Slightly darker shade */
+    color: #1c3448;
+}
+
+/* Error Messages */
+.error-message {
+    font-size: 0.85rem;
+    color: #e63946; /* Bright red for visibility */
+    margin-top: -12px;
+    margin-bottom: 12px;
+    display: block;
+    font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px; /* Compact padding */
+        margin: 30px auto;
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    input.form-control {
+        font-size: 0.9rem; /* Smaller input text size */
+    }
+
+    .submit-button,
+    a.cancel-link {
+        font-size: 0.9rem; /* Reduced button size */
+    }
+}

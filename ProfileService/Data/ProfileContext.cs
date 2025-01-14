@@ -3,17 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ThamcoProfiles.Models;
+using ProfileService.Models;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace ThamcoProfiles.Data
+namespace ProfileService.Data
 {
     public class ProfileContext : DbContext
     {
-        public ProfileContext (DbContextOptions<ProfileContext> options)
-            : base(options)
+        public ProfileContext(DbContextOptions<ProfileContext> options) : base(options)
         {
         }
 
-        public DbSet<ThamcoProfiles.Models.Profile> Profile { get; set; } = default!;
+        public required DbSet<Profile> Profiles { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder
+                .EnableSensitiveDataLogging() // Keep only during development
+                .ConfigureWarnings(warnings =>
+                {
+                    warnings.Ignore(RelationalEventId.PendingModelChangesWarning);
+                });
+        }
     }
 }
+
+

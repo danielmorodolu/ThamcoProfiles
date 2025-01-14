@@ -1,6 +1,6 @@
 using System;
 
-namespace ThamcoProfiles.Services.Products;
+namespace ProfileService.Services.Products;
 
 public interface IProductService{
 

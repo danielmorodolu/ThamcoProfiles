@@ -1,0 +1,14 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["PageTitle"] = "Sign In";
+}
+
+<div class="auth-container mt-5">
+    <h3 class="auth-header text-center">@ViewData["PageTitle"]</h3>
+
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Login", "Account")" class="btn btn-success btn-lg">
+            <i class="bi bi-key"></i> Sign In with Auth0
+        </a>
+    </div>
+</div>

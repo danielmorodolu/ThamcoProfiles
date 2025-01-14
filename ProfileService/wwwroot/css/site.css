@@ -1,31 +1,111 @@
+/* Base Font Sizes */
 html {
-  font-size: 14px;
+  font-size: 13px; /* Default smaller size */
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+      font-size: 15px; /* Increase font size on larger screens */
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/* Focus Styles */
+.btn:focus,
+.btn:active:focus,
+.form-control:focus {
+  box-shadow: 0 0 4px rgba(0, 128, 255, 0.5); /* Subtle blue glow */
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+/* Global Layout */
+html, body {
+  height: 100%; /* Ensure full-height layout */
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin-bottom: 60px;
+  padding-bottom: 70px; /* Reserve space for sticky footer */
+  background-color: #f7fafc; /* Light background */
+  font-family: 'Arial', sans-serif;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Floating Form Placeholders */
+.form-floating > .form-control::placeholder {
+  color: #ccc; /* Subtle gray */
+  font-style: italic;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.form-floating > .form-control:focus::placeholder {
+  color: #888; /* Slightly darker gray */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #2c3e50; /* Darker navy blue */
+}
+
+/* Centered Search Bar */
+.navbar .search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.navbar .search-container .form-control {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Subtle white border */
+  color: #ffffff; /* White text */
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.navbar .search-container .form-control::placeholder {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5); /* Subtle placeholder */
+}
+
+/* Navbar Links */
+.navbar .nav-item .nav-link {
+  color: #ffffff; /* White links */
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: #16a085; /* Greenish highlight */
+}
+
+/* Buttons */
+.btn {
+  border-radius: 15px; /* Softer corners */
+  padding: 10px 15px;
+}
+
+/* Sign-In Button */
+.signin-btn {
+  background-color: #3498db; /* Vibrant blue */
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signin-btn:hover {
+  background-color: #2980b9; /* Darker blue */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .nav-item {
+      margin: 5px 0;
+  }
+
+  .navbar .search-container {
+      flex-direction: column;
+      gap: 10px; /* Space between elements */
+  }
 }

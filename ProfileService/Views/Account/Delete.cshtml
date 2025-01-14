@@ -1,0 +1,55 @@
+@model ProfileService.Models.Profile
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["PageTitle"] = "Confirm Deletion";
+    ViewData["Controller"] = "Account";
+    ViewData["Action"] = "Delete";
+}
+
+<link rel="stylesheet" href="~/css/delete.css" />
+
+<div class="container my-5">
+    <div class="card border-danger shadow-sm">
+        <div class="card-header bg-danger text-white">
+            <h2 class="mb-0">Delete Account</h2>
+        </div>
+        <div class="card-body">
+            <h4 class="text-danger">Are you certain you want to permanently delete your account?</h4>
+            <p class="text-muted">This action cannot be undone.</p>
+            <hr />
+
+            <!-- User Information -->
+            <div class="user-details">
+                <div class="mb-3">
+                    <h6 class="fw-bold">First Name:</h6>
+                    <p>@Model.FirstName</p>
+                </div>
+                <div class="mb-3">
+                    <h6 class="fw-bold">Last Name:</h6>
+                    <p>@Model.LastName</p>
+                </div>
+                <div class="mb-3">
+                    <h6 class="fw-bold">Email:</h6>
+                    <p>@Model.Email</p>
+                </div>
+                <div class="mb-3">
+                    <h6 class="fw-bold">Payment Address:</h6>
+                    <p>@Model.PaymentAddress</p>
+                </div>
+                <div class="mb-3">
+                    <h6 class="fw-bold">Phone Number:</h6>
+                    <p>@Model.PhoneNumber</p>
+                </div>
+            </div>
+
+            <!-- Delete Confirmation Form -->
+            <form asp-action="Delete" method="post" class="mt-4">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger btn-lg">Delete</button>
+                <a class="btn btn-secondary btn-lg ms-3" asp-action="Details" asp-controller="Account">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

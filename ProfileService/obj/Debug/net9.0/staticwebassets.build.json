@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6V/meMRjUe2Mr23T8zkUjLasvveGTmSwdfdroMisGNM=",
+  "Hash": "2vvyt63Knzu0mkBPsiwNx75BtPt2oWgdC6RSwYXfmHk=",
   "Source": "ProfileService",
   "BasePath": "_content/ProfileService",
   "Mode": "Default",
@@ -204,6 +204,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/624wssiibm-ulo4hq3v3a.gz",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "css/profile-details#[.{fingerprint=ulo4hq3v3a}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-details.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "hh2b5mmura",
+      "Integrity": "Vf6L5EX2XfUgHXzj6jrNHSEvcptbTrLa5wYb05pmXHQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-details.css"
     },
     {
       "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/7savscbqw1-j5mq2jizvt.gz",
@@ -437,12 +458,12 @@
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-3prynwsgv6.gz",
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-kxh3ryutgk.gz",
       "SourceId": "ProfileService",
       "SourceType": "Computed",
       "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/ProfileService",
-      "RelativePath": "ProfileService#[.{fingerprint=3prynwsgv6}]?.styles.css.gz",
+      "RelativePath": "ProfileService#[.{fingerprint=kxh3ryutgk}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -451,8 +472,8 @@
       "RelatedAsset": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/bundle/ProfileService.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "zlzmuvxfs8",
-      "Integrity": "ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=",
+      "Fingerprint": "0lqj3jpzvl",
+      "Integrity": "VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/bundle/ProfileService.styles.css"
@@ -773,6 +794,27 @@
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/jwu0ql3f0z-d67cqcqtrv.gz",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "js/Editfield#[.{fingerprint=d67cqcqtrv}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/js/Editfield.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "d6jqx4iq4p",
+      "Integrity": "ldR0iFFQshRhGFxoZ+wiYW2xX+lN8j7DEedOfHqVG0w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/js/Editfield.js"
+    },
+    {
       "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/k9asy8kcjk-ausgxo2sd3.gz",
       "SourceId": "ProfileService",
       "SourceType": "Discovered",
@@ -813,6 +855,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/kr6zg2h672-mhjqyva3zu.gz",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "css/products#[.{fingerprint=mhjqyva3zu}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/products.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "6e3ju7drs7",
+      "Integrity": "En6qZyv4BhL3kkcGW27ODKHqjrjqM9k1wajcPdN+pxs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/products.css"
     },
     {
       "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/l0eu6xajly-jj8uyg4cgr.gz",
@@ -878,6 +941,27 @@
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/nirlae1i10-47rf0mr46h.gz",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "css/profile-edit#[.{fingerprint=47rf0mr46h}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-edit.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "513g8r5poq",
+      "Integrity": "p6h47lUmAFzAKkRfeooxQRJHp8iehIme+0km4UeIwWw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-edit.css"
+    },
+    {
       "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/o9q4vp2ah0-tdbxkamptv.gz",
       "SourceId": "ProfileService",
       "SourceType": "Discovered",
@@ -920,12 +1004,12 @@
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-b9sayid5wm.gz",
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-ki5yl7boi7.gz",
       "SourceId": "ProfileService",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/ProfileService",
-      "RelativePath": "css/site#[.{fingerprint=b9sayid5wm}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=ki5yl7boi7}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -934,8 +1018,8 @@
       "RelatedAsset": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "pw5l7j5n1s",
-      "Integrity": "KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=",
+      "Fingerprint": "5tnmkq5l97",
+      "Integrity": "Ce7ACIhePjABEUpHxMwerV7u8AiSF9M3SY+I0gKXKtQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/site.css"
@@ -1319,12 +1403,33 @@
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-3prynwsgv6.gz",
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/ykwrgnz8mm-oyghok3ygw.gz",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "css/delete#[.{fingerprint=oyghok3ygw}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/delete.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "b3sx82l8bs",
+      "Integrity": "iVNcIdYoOePc0MMzQicM+CfB/ONvVvKa1hYN9LUvvpA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/delete.css"
+    },
+    {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-kxh3ryutgk.gz",
       "SourceId": "ProfileService",
       "SourceType": "Computed",
       "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/ProfileService",
-      "RelativePath": "ProfileService#[.{fingerprint=3prynwsgv6}]!.bundle.scp.css.gz",
+      "RelativePath": "ProfileService#[.{fingerprint=kxh3ryutgk}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -1333,8 +1438,8 @@
       "RelatedAsset": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/projectbundle/ProfileService.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "zlzmuvxfs8",
-      "Integrity": "ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=",
+      "Fingerprint": "0lqj3jpzvl",
+      "Integrity": "VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/projectbundle/ProfileService.bundle.scp.css"
@@ -1375,8 +1480,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "3prynwsgv6",
-      "Integrity": "SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=",
+      "Fingerprint": "kxh3ryutgk",
+      "Integrity": "eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/bundle/ProfileService.styles.css"
@@ -1396,11 +1501,95 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "3prynwsgv6",
-      "Integrity": "SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=",
+      "Fingerprint": "kxh3ryutgk",
+      "Integrity": "eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/projectbundle/ProfileService.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/delete.css",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "css/delete#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oyghok3ygw",
+      "Integrity": "4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/delete.css"
+    },
+    {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/products.css",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "css/products#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mhjqyva3zu",
+      "Integrity": "1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/products.css"
+    },
+    {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-details.css",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "css/profile-details#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ulo4hq3v3a",
+      "Integrity": "bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/profile-details.css"
+    },
+    {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-edit.css",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "css/profile-edit#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "47rf0mr46h",
+      "Integrity": "cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/profile-edit.css"
     },
     {
       "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/site.css",
@@ -1417,8 +1606,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b9sayid5wm",
-      "Integrity": "j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=",
+      "Fingerprint": "ki5yl7boi7",
+      "Integrity": "bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -1443,6 +1632,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/js/Editfield.js",
+      "SourceId": "ProfileService",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/",
+      "BasePath": "_content/ProfileService",
+      "RelativePath": "js/Editfield#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d67cqcqtrv",
+      "Integrity": "VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/Editfield.js"
     },
     {
       "Identity": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/js/site.js",
@@ -2728,13 +2938,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.b9sayid5wm.css",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-b9sayid5wm.gz",
+      "Route": "css/delete.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/ykwrgnz8mm-oyghok3ygw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003134796238"
+          "Quality": "0.001023541453"
         }
       ],
       "ResponseHeaders": [
@@ -2744,15 +2954,152 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "976"
         },
         {
           "Name": "ETag",
-          "Value": "\"KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=\""
+          "Value": "\"iVNcIdYoOePc0MMzQicM+CfB/ONvVvKa1hYN9LUvvpA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:07:56 GMT"
+          "Value": "Mon, 13 Jan 2025 21:10:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus="
+        }
+      ]
+    },
+    {
+      "Route": "css/delete.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/delete.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2345"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:10:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus="
+        }
+      ]
+    },
+    {
+      "Route": "css/delete.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/ykwrgnz8mm-oyghok3ygw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "976"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iVNcIdYoOePc0MMzQicM+CfB/ONvVvKa1hYN9LUvvpA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:10:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iVNcIdYoOePc0MMzQicM+CfB/ONvVvKa1hYN9LUvvpA="
+        }
+      ]
+    },
+    {
+      "Route": "css/delete.oyghok3ygw.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/ykwrgnz8mm-oyghok3ygw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001023541453"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "976"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iVNcIdYoOePc0MMzQicM+CfB/ONvVvKa1hYN9LUvvpA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:10:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2772,26 +3119,1073 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "oyghok3ygw"
         },
         {
           "Name": "label",
-          "Value": "css/site.css"
+          "Value": "css/delete.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css",
+      "Route": "css/delete.oyghok3ygw.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/delete.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2345"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:10:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oyghok3ygw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/delete.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4PcVeIHwyDKfqy66XXUF88Jwa4kQ8rHylu2RiWXvHus="
+        }
+      ]
+    },
+    {
+      "Route": "css/delete.oyghok3ygw.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/ykwrgnz8mm-oyghok3ygw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "976"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iVNcIdYoOePc0MMzQicM+CfB/ONvVvKa1hYN9LUvvpA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:10:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oyghok3ygw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/delete.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iVNcIdYoOePc0MMzQicM+CfB/ONvVvKa1hYN9LUvvpA="
+        }
+      ]
+    },
+    {
+      "Route": "css/products.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/kr6zg2h672-mhjqyva3zu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001137656428"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "878"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"En6qZyv4BhL3kkcGW27ODKHqjrjqM9k1wajcPdN+pxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:25:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U="
+        }
+      ]
+    },
+    {
+      "Route": "css/products.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/products.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2140"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:25:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U="
+        }
+      ]
+    },
+    {
+      "Route": "css/products.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/kr6zg2h672-mhjqyva3zu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"En6qZyv4BhL3kkcGW27ODKHqjrjqM9k1wajcPdN+pxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:25:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-En6qZyv4BhL3kkcGW27ODKHqjrjqM9k1wajcPdN+pxs="
+        }
+      ]
+    },
+    {
+      "Route": "css/products.mhjqyva3zu.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/kr6zg2h672-mhjqyva3zu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001137656428"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "878"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"En6qZyv4BhL3kkcGW27ODKHqjrjqM9k1wajcPdN+pxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:25:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mhjqyva3zu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/products.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U="
+        }
+      ]
+    },
+    {
+      "Route": "css/products.mhjqyva3zu.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/products.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2140"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:25:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mhjqyva3zu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/products.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1nwPtHWaMZO2wivFaKJHsUMD1Cu0MpoOgUv8OQZg13U="
+        }
+      ]
+    },
+    {
+      "Route": "css/products.mhjqyva3zu.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/kr6zg2h672-mhjqyva3zu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"En6qZyv4BhL3kkcGW27ODKHqjrjqM9k1wajcPdN+pxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:25:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mhjqyva3zu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/products.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-En6qZyv4BhL3kkcGW27ODKHqjrjqM9k1wajcPdN+pxs="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-details.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/624wssiibm-ulo4hq3v3a.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001091703057"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "915"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vf6L5EX2XfUgHXzj6jrNHSEvcptbTrLa5wYb05pmXHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:19:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-details.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-details.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:19:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-details.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/624wssiibm-ulo4hq3v3a.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "915"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vf6L5EX2XfUgHXzj6jrNHSEvcptbTrLa5wYb05pmXHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:19:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vf6L5EX2XfUgHXzj6jrNHSEvcptbTrLa5wYb05pmXHQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-details.ulo4hq3v3a.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/624wssiibm-ulo4hq3v3a.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001091703057"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "915"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vf6L5EX2XfUgHXzj6jrNHSEvcptbTrLa5wYb05pmXHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:19:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ulo4hq3v3a"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile-details.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-details.ulo4hq3v3a.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-details.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:19:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ulo4hq3v3a"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile-details.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bmGi4Vh0PS32HgjMGxfRSTyHh5zaT2p1S6e9TxRC8DA="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-details.ulo4hq3v3a.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/624wssiibm-ulo4hq3v3a.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "915"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vf6L5EX2XfUgHXzj6jrNHSEvcptbTrLa5wYb05pmXHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:19:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ulo4hq3v3a"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile-details.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vf6L5EX2XfUgHXzj6jrNHSEvcptbTrLa5wYb05pmXHQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-edit.47rf0mr46h.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/nirlae1i10-47rf0mr46h.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000843881857"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1184"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6h47lUmAFzAKkRfeooxQRJHp8iehIme+0km4UeIwWw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:22:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "47rf0mr46h"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile-edit.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-edit.47rf0mr46h.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-edit.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3106"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:22:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "47rf0mr46h"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile-edit.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-edit.47rf0mr46h.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/nirlae1i10-47rf0mr46h.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1184"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6h47lUmAFzAKkRfeooxQRJHp8iehIme+0km4UeIwWw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:22:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "47rf0mr46h"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile-edit.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-p6h47lUmAFzAKkRfeooxQRJHp8iehIme+0km4UeIwWw="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-edit.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/nirlae1i10-47rf0mr46h.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000843881857"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1184"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6h47lUmAFzAKkRfeooxQRJHp8iehIme+0km4UeIwWw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:22:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-edit.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/profile-edit.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3106"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:22:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cP8u6i/z0Jge3tc//uIaoyHp1JILLEbZikl0e+1gjCs="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile-edit.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/nirlae1i10-47rf0mr46h.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1184"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6h47lUmAFzAKkRfeooxQRJHp8iehIme+0km4UeIwWw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:22:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-p6h47lUmAFzAKkRfeooxQRJHp8iehIme+0km4UeIwWw="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-ki5yl7boi7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001003009027"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "996"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ce7ACIhePjABEUpHxMwerV7u8AiSF9M3SY+I0gKXKtQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:26:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
       "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2801,7 +4195,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "2488"
         },
         {
           "Name": "Content-Type",
@@ -2809,11 +4203,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:07:56 GMT"
+          "Value": "Mon, 13 Jan 2025 21:26:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-ki5yl7boi7.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ce7ACIhePjABEUpHxMwerV7u8AiSF9M3SY+I0gKXKtQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:26:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ce7ACIhePjABEUpHxMwerV7u8AiSF9M3SY+I0gKXKtQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ki5yl7boi7.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-ki5yl7boi7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001003009027"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "996"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ce7ACIhePjABEUpHxMwerV7u8AiSF9M3SY+I0gKXKtQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:26:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ki5yl7boi7"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ki5yl7boi7.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2488"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 21:26:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2823,7 +4362,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "ki5yl7boi7"
         },
         {
           "Name": "label",
@@ -2831,13 +4370,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-bLHmyIGKrZR2PfMGcS5+ZOJso+n2CbBhJf1+eIjguXM="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css.gz",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-b9sayid5wm.gz",
+      "Route": "css/site.ki5yl7boi7.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-ki5yl7boi7.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2846,7 +4385,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "996"
         },
         {
           "Name": "Content-Type",
@@ -2854,11 +4393,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=\""
+          "Value": "\"Ce7ACIhePjABEUpHxMwerV7u8AiSF9M3SY+I0gKXKtQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:07:56 GMT"
+          "Value": "Mon, 13 Jan 2025 21:26:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2876,7 +4415,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "ki5yl7boi7"
         },
         {
           "Name": "label",
@@ -2884,144 +4423,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-b9sayid5wm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003134796238"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "318"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:07:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "667"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:07:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/okzw3kmh2g-b9sayid5wm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "318"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:07:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KbRAtTdCZlkPQMEP8615MCQRMWQsaAwQYpxvPAoetmA="
+          "Value": "sha256-Ce7ACIhePjABEUpHxMwerV7u8AiSF9M3SY+I0gKXKtQ="
         }
       ]
     },
@@ -3320,6 +4722,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-+/824NtfTA0L7Mr42Fo+86YJP4R5cigdi9S7Fx5VVl4="
+        }
+      ]
+    },
+    {
+      "Route": "js/Editfield.d67cqcqtrv.js",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/jwu0ql3f0z-d67cqcqtrv.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000811030008"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1232"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ldR0iFFQshRhGFxoZ+wiYW2xX+lN8j7DEedOfHqVG0w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 14 Jan 2025 00:11:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d67cqcqtrv"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Editfield.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY="
+        }
+      ]
+    },
+    {
+      "Route": "js/Editfield.d67cqcqtrv.js",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/js/Editfield.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3980"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 14 Jan 2025 00:11:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d67cqcqtrv"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Editfield.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY="
+        }
+      ]
+    },
+    {
+      "Route": "js/Editfield.d67cqcqtrv.js.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/jwu0ql3f0z-d67cqcqtrv.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1232"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ldR0iFFQshRhGFxoZ+wiYW2xX+lN8j7DEedOfHqVG0w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 14 Jan 2025 00:11:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d67cqcqtrv"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Editfield.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ldR0iFFQshRhGFxoZ+wiYW2xX+lN8j7DEedOfHqVG0w="
+        }
+      ]
+    },
+    {
+      "Route": "js/Editfield.js",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/jwu0ql3f0z-d67cqcqtrv.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000811030008"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1232"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ldR0iFFQshRhGFxoZ+wiYW2xX+lN8j7DEedOfHqVG0w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 14 Jan 2025 00:11:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY="
+        }
+      ]
+    },
+    {
+      "Route": "js/Editfield.js",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/wwwroot/js/Editfield.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3980"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 14 Jan 2025 00:11:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VZmuo/FJDc9iMZYJqyvqBo8pCO6tNFqsfPKqGde49PY="
+        }
+      ]
+    },
+    {
+      "Route": "js/Editfield.js.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/jwu0ql3f0z-d67cqcqtrv.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1232"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ldR0iFFQshRhGFxoZ+wiYW2xX+lN8j7DEedOfHqVG0w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 14 Jan 2025 00:11:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ldR0iFFQshRhGFxoZ+wiYW2xX+lN8j7DEedOfHqVG0w="
         }
       ]
     },
@@ -21286,13 +22986,13 @@
       ]
     },
     {
-      "Route": "ProfileService.3prynwsgv6.bundle.scp.css",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-3prynwsgv6.gz",
+      "Route": "ProfileService.bundle.scp.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-kxh3ryutgk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001858736059"
+          "Quality": "0.001592356688"
         }
       ],
       "ResponseHeaders": [
@@ -21302,19 +23002,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "537"
+          "Value": "627"
         },
         {
           "Name": "ETag",
-          "Value": "\"ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=\""
+          "Value": "\"VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -21330,26 +23030,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=\""
+          "Value": "W/\"eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "3prynwsgv6"
-        },
-        {
-          "Name": "label",
-          "Value": "ProfileService.bundle.scp.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk="
+          "Value": "sha256-eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00="
         }
       ]
     },
     {
-      "Route": "ProfileService.3prynwsgv6.bundle.scp.css",
+      "Route": "ProfileService.bundle.scp.css",
       "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/projectbundle/ProfileService.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21359,7 +23051,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1083"
+          "Value": "1540"
         },
         {
           "Name": "Content-Type",
@@ -21367,11 +23059,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=\""
+          "Value": "\"eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00="
+        }
+      ]
+    },
+    {
+      "Route": "ProfileService.bundle.scp.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-kxh3ryutgk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "627"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA="
+        }
+      ]
+    },
+    {
+      "Route": "ProfileService.kxh3ryutgk.bundle.scp.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-kxh3ryutgk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001592356688"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "627"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kxh3ryutgk"
+        },
+        {
+          "Name": "label",
+          "Value": "ProfileService.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00="
+        }
+      ]
+    },
+    {
+      "Route": "ProfileService.kxh3ryutgk.bundle.scp.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/projectbundle/ProfileService.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1540"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21381,7 +23218,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3prynwsgv6"
+          "Value": "kxh3ryutgk"
         },
         {
           "Name": "label",
@@ -21389,13 +23226,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk="
+          "Value": "sha256-eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00="
         }
       ]
     },
     {
-      "Route": "ProfileService.3prynwsgv6.bundle.scp.css.gz",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-3prynwsgv6.gz",
+      "Route": "ProfileService.kxh3ryutgk.bundle.scp.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-kxh3ryutgk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21404,7 +23241,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "537"
+          "Value": "627"
         },
         {
           "Name": "Content-Type",
@@ -21412,11 +23249,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=\""
+          "Value": "\"VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21434,7 +23271,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3prynwsgv6"
+          "Value": "kxh3ryutgk"
         },
         {
           "Name": "label",
@@ -21442,18 +23279,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY="
+          "Value": "sha256-VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA="
         }
       ]
     },
     {
-      "Route": "ProfileService.3prynwsgv6.styles.css",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-3prynwsgv6.gz",
+      "Route": "ProfileService.kxh3ryutgk.styles.css",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-kxh3ryutgk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001858736059"
+          "Quality": "0.001592356688"
         }
       ],
       "ResponseHeaders": [
@@ -21463,15 +23300,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "537"
+          "Value": "627"
         },
         {
           "Name": "ETag",
-          "Value": "\"ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=\""
+          "Value": "\"VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21491,13 +23328,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=\""
+          "Value": "W/\"eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3prynwsgv6"
+          "Value": "kxh3ryutgk"
         },
         {
           "Name": "label",
@@ -21505,12 +23342,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk="
+          "Value": "sha256-eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00="
         }
       ]
     },
     {
-      "Route": "ProfileService.3prynwsgv6.styles.css",
+      "Route": "ProfileService.kxh3ryutgk.styles.css",
       "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/bundle/ProfileService.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21520,7 +23357,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1083"
+          "Value": "1540"
         },
         {
           "Name": "Content-Type",
@@ -21528,11 +23365,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=\""
+          "Value": "\"eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21542,7 +23379,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3prynwsgv6"
+          "Value": "kxh3ryutgk"
         },
         {
           "Name": "label",
@@ -21550,13 +23387,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk="
+          "Value": "sha256-eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00="
         }
       ]
     },
     {
-      "Route": "ProfileService.3prynwsgv6.styles.css.gz",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-3prynwsgv6.gz",
+      "Route": "ProfileService.kxh3ryutgk.styles.css.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-kxh3ryutgk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21565,7 +23402,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "537"
+          "Value": "627"
         },
         {
           "Name": "Content-Type",
@@ -21573,11 +23410,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=\""
+          "Value": "\"VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21595,7 +23432,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3prynwsgv6"
+          "Value": "kxh3ryutgk"
         },
         {
           "Name": "label",
@@ -21603,155 +23440,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY="
-        }
-      ]
-    },
-    {
-      "Route": "ProfileService.bundle.scp.css",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-3prynwsgv6.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001858736059"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "537"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk="
-        }
-      ]
-    },
-    {
-      "Route": "ProfileService.bundle.scp.css",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/scopedcss/projectbundle/ProfileService.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1083"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk="
-        }
-      ]
-    },
-    {
-      "Route": "ProfileService.bundle.scp.css.gz",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/zd8ji2vnxl-3prynwsgv6.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "537"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY="
+          "Value": "sha256-VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA="
         }
       ]
     },
     {
       "Route": "ProfileService.styles.css",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-3prynwsgv6.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-kxh3ryutgk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001858736059"
+          "Quality": "0.001592356688"
         }
       ],
       "ResponseHeaders": [
@@ -21761,15 +23461,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "537"
+          "Value": "627"
         },
         {
           "Name": "ETag",
-          "Value": "\"ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=\""
+          "Value": "\"VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21789,13 +23489,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=\""
+          "Value": "W/\"eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk="
+          "Value": "sha256-eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00="
         }
       ]
     },
@@ -21810,7 +23510,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1083"
+          "Value": "1540"
         },
         {
           "Name": "Content-Type",
@@ -21818,11 +23518,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk=\""
+          "Value": "\"eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21832,13 +23532,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SYgE+mVT8MW61gn1u6t++qCJBFC4uLHCXrzLOYHhyfk="
+          "Value": "sha256-eJ/+/RfsZ7S96l+SNFKwe9ZUFGznyBcuEVoIyVTSZ00="
         }
       ]
     },
     {
       "Route": "ProfileService.styles.css.gz",
-      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-3prynwsgv6.gz",
+      "AssetFile": "/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/compressed/cewzjewa7m-kxh3ryutgk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21847,7 +23547,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "537"
+          "Value": "627"
         },
         {
           "Name": "Content-Type",
@@ -21855,11 +23555,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY=\""
+          "Value": "\"VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 22:10:41 GMT"
+          "Value": "Mon, 13 Jan 2025 22:17:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21877,7 +23577,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ORhCIDWkRqvx07InCJOnJtxTSWW+df6bj2C+u8V4LWY="
+          "Value": "sha256-VGzjWSBK1V1Y58WB6OpoMeCXvBnObnz7sqVmu0AtQwA="
         }
       ]
     }

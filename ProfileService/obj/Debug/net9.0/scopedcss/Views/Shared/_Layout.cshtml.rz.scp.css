@@ -1,48 +1,75 @@
-/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand[b-x0a9vd78uq] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+body[b-x0a9vd78uq] {
+  background-color: #eaf3f9; /* Light blue background for better contrast */
+  font-family: 'Roboto', sans-serif; /* Modern and clean font */
 }
 
-a[b-x0a9vd78uq] {
-  color: #0077cc;
+.navbar[b-x0a9vd78uq] {
+  background-color: #1e3d58; /* Dark blue for navbar */
+}
+
+.navbar-brand[b-x0a9vd78uq] {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.navbar .form-control[b-x0a9vd78uq] {
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.navbar .btn[b-x0a9vd78uq] {
+  border-radius: 20px;
+}
+
+.navbar .dropdown-menu[b-x0a9vd78uq] {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card[b-x0a9vd78uq] {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+}
+
+.card:hover[b-x0a9vd78uq] {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.card-title[b-x0a9vd78uq] {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e3d58;
+}
+
+.card-footer[b-x0a9vd78uq] {
+  border-top: 1px solid #f0f4f8;
 }
 
 .btn-primary[b-x0a9vd78uq] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #1e3d58;
+  border-color: #1e3d58;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active[b-x0a9vd78uq], .nav-pills .show > .nav-link[b-x0a9vd78uq] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.btn-primary:hover[b-x0a9vd78uq] {
+  background-color: #16314e; /* Darker shade on hover */
 }
 
-.border-top[b-x0a9vd78uq] {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom[b-x0a9vd78uq] {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow[b-x0a9vd78uq] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+/* Badge Styling for Cart */
+.badge[b-x0a9vd78uq] {
+  font-size: 0.75rem;
+  padding: 5px 7px;
+  color: #ffffff;
 }
 
-button.accept-policy[b-x0a9vd78uq] {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-.footer[b-x0a9vd78uq] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .form-control[b-x0a9vd78uq] {
+      width: 100%;
+  }
 }

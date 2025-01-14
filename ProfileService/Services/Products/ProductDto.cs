@@ -1,7 +1,7 @@
 using System;
 using Microsoft.VisualBasic;
 
-namespace ThamcoProfiles.Services.Products;
+namespace ProfileService.Services.Products;
 
 public class ProductDto{
 
