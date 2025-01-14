@@ -18,22 +18,22 @@ builder.Services.AddHttpClient();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
 // Configure database for development and deployment
 builder.Services.AddDbContext<ProfileContext>(options =>
 {
     if (builder.Environment.IsDevelopment())
     {
+        // Use SQLite for development
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
         var dbPath = System.IO.Path.Join(path, "profile.db");
         options.UseSqlite($"Data Source={dbPath}");
         options.EnableDetailedErrors();
         options.EnableSensitiveDataLogging();
-        
     }
     else
     {
+        // Use SQL Server for production
         var connectionString = builder.Configuration.GetConnectionString("ProfileContext");
         options.UseSqlServer(connectionString, sqlOptions =>
         {
@@ -43,24 +43,27 @@ builder.Services.AddDbContext<ProfileContext>(options =>
     options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 });
 
-
-builder.Services.AddScoped<IProductService, ProductService>();
-// Configure conditional dependency injection
+// Configure conditional dependency injection for IProductService
 if (builder.Environment.IsDevelopment())
 {
+    // Use FakeProductService in development
     builder.Services.AddSingleton<IProductService, FakeProductService>();
 }
 else
 {
-    builder.Services.AddHttpClient<IProductService, ProductService>()
-        .AddPolicyHandler(GetRetryPolicy())
-        .AddPolicyHandler(GetCircuitBreakerPolicy());
+    // Use ProductService with HttpClient in production
+    builder.Services.AddHttpClient<IProductService, ProductService>(client =>
+    {
+        client.BaseAddress = new Uri(builder.Configuration["ProductService:BaseUrl"]);
+    })
+    .AddPolicyHandler(GetRetryPolicy())
+    .AddPolicyHandler(GetCircuitBreakerPolicy());
 }
 
+// Configure the real profile service
 builder.Services.AddScoped<IProfileService, RealProfileService>();
 
-
-
+// Configure cookie policy
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
     options.MinimumSameSitePolicy = SameSiteMode.None;
@@ -80,7 +83,7 @@ builder.Services.AddAuthentication(options =>
     options.Authority = $"https://{builder.Configuration["Auth0:Domain"]}";
     options.ClientId = builder.Configuration["Auth0:ClientId"];
     options.ClientSecret = builder.Configuration["Auth0:ClientSecret"];
-   options.ResponseType = "code";
+    options.ResponseType = "code";
     options.CallbackPath = new PathString("/callback");
     options.SaveTokens = true;
 
@@ -109,59 +112,54 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
 builder.Services.AddAuthorization();
-
 
 var app = builder.Build();
 
-app.MapControllers();
-app.UseHttpsRedirection();
-
-
-
-
-// Configure middleware pipeline
+// Middleware pipeline configuration
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
-builder.Logging.AddConsole();
-
-if (app.Environment.IsDevelopment())
+else
 {
     app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 });
-app.UseStaticFiles();
-app.UseRouting();
-app.UseAuthentication();
-app.Use(async (context, next) =>
-{
-    Console.WriteLine($"Request: {context.Request.Method} {context.Request.Path}");
-    await next();
-});
-app.MapControllers();
 
-app.UseAuthorization();
-app.MapControllers();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+// Log resolved services for debugging
+var productServiceType = app.Services.GetRequiredService<IProductService>().GetType().Name;
+Console.WriteLine($"Resolved IProductService: {productServiceType}");
+
+// Endpoint configuration
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
+// Default route configuration
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
 
-app.Run();
-
+// Define retry policy
 IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 {
     return HttpPolicyExtensions
@@ -171,6 +169,7 @@ IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
             TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
 }
 
+// Define circuit breaker policy
 IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 {
     return HttpPolicyExtensions
