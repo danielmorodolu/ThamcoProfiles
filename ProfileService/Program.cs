@@ -111,7 +111,7 @@ builder.Services.AddHttpsRedirection(options =>
     options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
     options.HttpsPort = 8080; // Match your port configuration
     // Update the URL to bind to port 7285
-builder.WebHost.UseUrls("http://+:8080");
+builder.WebHost.UseUrls("http://0.0.0.0:8080");
 });
 }
 
