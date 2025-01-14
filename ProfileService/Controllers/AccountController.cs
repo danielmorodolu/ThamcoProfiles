@@ -75,6 +75,20 @@ public async Task<IActionResult> Details()
     {
         var auth0UserId = Auth0UserHelper.GetAuth0UserId(User);
         var user = await _profileService.GetUserByAuth0IdAsync(auth0UserId);
+        var userEmail = Auth0UserHelper.GetEmail(User);
+
+        if(user==null){
+
+                    user = new Profile
+                    {
+                        Email = userEmail ?? "",
+                        Auth0UserId = auth0UserId,
+                        Password = "Auth0PasswordSetHere", // You can handle password reset with Auth0
+                    };
+
+                    await _profileService.AddUserAsync(user);
+                    await _profileService.SaveChangesAsync();
+            }
 
         if (user == null)
         {
