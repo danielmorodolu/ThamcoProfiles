@@ -111,6 +111,15 @@ app.MapControllers();
 // Remove this line and move it to the end of the file
 
 
+if (!app.Environment.IsDevelopment()){
+builder.Services.AddHttpsRedirection(options =>
+{
+    options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
+    options.HttpsPort = 7285; // Match your port configuration
+});
+app.UseHttpsRedirection();
+}
+
 
 // Configure middleware pipeline
 if (!app.Environment.IsDevelopment())
