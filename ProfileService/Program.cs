@@ -8,65 +8,65 @@ using ProfileService.Data;
 using ProfileService.Services.Products;
 using ProfileService.Services.Profiling;
 using System.Net.Http;
+using System.Net;
 using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Adding essential services to the container
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProfileService, RealProfileService>();
 
-// Configure database for development and deployment
+// Configuring database based on environment (Development or Production)
 builder.Services.AddDbContext<ProfileContext>(options =>
 {
-   if (builder.Environment.IsDevelopment())
+    if (builder.Environment.IsDevelopment())
     {
-        // Use SQLite for development
+        // SQLite configuration for Development
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
-        var dbPath = System.IO.Path.Join(path, "profile.db");
+        var dbPath = Path.Join(path, "profile_dev.db"); // Changed file name for better clarity
         options.UseSqlite($"Data Source={dbPath}");
         options.EnableDetailedErrors();
         options.EnableSensitiveDataLogging();
     }
-    else{
-    
-        // Use SQL Server for production
+    else
+    {*/
+        // SQL Server configuration for Production
         var connectionString = builder.Configuration.GetConnectionString("ProfileContext");
         options.UseSqlServer(connectionString, sqlOptions =>
         {
-            sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(6), errorNumbersToAdd: null);
+            sqlOptions.EnableRetryOnFailure(maxRetryCount: 3, maxRetryDelay: TimeSpan.FromSeconds(5), errorNumbersToAdd: null); // Reduced retry count for production efficiency
         });
-   }
+    }
+
+    // Enabling detailed error logs only for Development
     options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 });
 
-// Configure conditional dependency injection for IProductService
+// Configuring conditional DI for IProductService
 if (builder.Environment.IsDevelopment())
 {
-    // Use FakeProductService in development
     builder.Services.AddSingleton<IProductService, FakeProductService>();
 }
 else
 {
-    // Use ProductService with HttpClient in production
     builder.Services.AddHttpClient<IProductService, ProductService>()
-        .AddPolicyHandler(GetRetryPolicy())
-        .AddPolicyHandler(GetCircuitBreakerPolicy());
+        .AddPolicyHandler(GetRetryPolicy()) // Retry policy for transient errors
+        .AddPolicyHandler(GetCircuitBreakerPolicy()); // Circuit breaker policy for fault tolerance
 }
 
-
-// Configure cookie policy
+// Configuring cookie policies for secure handling
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
-    options.MinimumSameSitePolicy = SameSiteMode.None;
+    options.MinimumSameSitePolicy = SameSiteMode.Strict; // Enforcing strict SameSite policy
     options.Secure = CookieSecurePolicy.Always;
 });
 
-// Configure authentication
+// Authentication configuration for cookie and OpenID Connect
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -79,10 +79,11 @@ builder.Services.AddAuthentication(options =>
     options.Authority = $"https://{builder.Configuration["Auth0:Domain"]}";
     options.ClientId = builder.Configuration["Auth0:ClientId"];
     options.ClientSecret = builder.Configuration["Auth0:ClientSecret"];
-    options.ResponseType = "code";
+    options.ResponseType = OpenIdConnectResponseType.Code;
     options.CallbackPath = new PathString("/callback");
     options.SaveTokens = true;
 
+    // Defining required scopes for authentication
     options.Scope.Clear();
     options.Scope.Add("openid");
     options.Scope.Add("profile");
@@ -91,6 +92,7 @@ builder.Services.AddAuthentication(options =>
 
     options.Events = new OpenIdConnectEvents
     {
+        // Custom sign-out redirection logic
         OnRedirectToIdentityProviderForSignOut = context =>
         {
             var logoutUri = $"https://{builder.Configuration["Auth0:Domain"]}/v2/logout?client_id={builder.Configuration["Auth0:ClientId"]}";
@@ -102,28 +104,28 @@ builder.Services.AddAuthentication(options =>
 
             context.Response.Redirect(logoutUri);
             context.HandleResponse();
-
             return Task.CompletedTask;
         }
     };
 });
 
+// Adding authorization services
 builder.Services.AddAuthorization();
 
+// Additional configurations for production environment
 if (!builder.Environment.IsDevelopment())
 {
     var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
     builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 }
 
-
 var app = builder.Build();
 
-// Middleware pipeline configuration
+// Configuring middleware pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    app.UseHsts(); // Enabling HSTS for secure headers
 }
 else
 {
@@ -137,17 +139,10 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-//app.UseForwardedHeaders(new ForwardedHeadersOptions
-//{
-   // ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-//});
-
 app.UseSwagger();
 app.UseSwaggerUI();
 
-
-
-// Default route configuration
+// Setting up default routing
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
@@ -156,20 +151,19 @@ app.MapControllers();
 
 app.Run();
 
-// Define retry policy
+// Retry policy for transient HTTP errors
 IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 {
     return HttpPolicyExtensions
         .HandleTransientHttpError()
-        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
-        .WaitAndRetryAsync(5, retryAttempt =>
-            TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+        .OrResult(msg => msg.StatusCode == HttpStatusCode.NotFound) // Retry on 404 errors
+        .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))); // Exponential backoff
 }
 
-// Define circuit breaker policy
+// Circuit breaker policy for fault tolerance
 IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 {
     return HttpPolicyExtensions
         .HandleTransientHttpError()
-        .CircuitBreakerAsync(5, TimeSpan.FromSeconds(30));
+        .CircuitBreakerAsync(2, TimeSpan.FromSeconds(15)); // Shorter break duration for faster recovery
 }

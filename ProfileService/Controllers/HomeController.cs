@@ -10,87 +10,104 @@ using Microsoft.AspNetCore.Mvc.ViewEngines;
 
 namespace ProfileService.Controllers
 {
+    /// <summary>
+    /// HomeController manages the main application logic, including the homepage, privacy policy, and error handling.
+    /// </summary>
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IProductService _productService;
         private readonly ICompositeViewEngine _viewEngine;
 
-        public HomeController(ILogger<HomeController> logger, IProductService productService, ICompositeViewEngine viewEngine)
+        /// <summary>
+        /// Constructor initializes logger, product service, and view engine dependencies.
+        /// </summary>
+        public HomeController(
+            ILogger<HomeController> logger,
+            IProductService productService,
+            ICompositeViewEngine viewEngine)
         {
             _logger = logger;
             _productService = productService;
             _viewEngine = viewEngine;
         }
 
-        // Homepage: Displays a list of products
+        /// <summary>
+        /// Displays the homepage with a list of products.
+        /// </summary>
         public async Task<IActionResult> Index()
         {
             try
             {
-                var products = await _productService.GetProductsAsync(); // Ensure the service returns a valid list
+                // Retrieve products using the service
+                var products = await _productService.GetProductsAsync() ?? new List<ProductDto>();
                 return View(products);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error fetching products: {ex.Message}");
-                return View(new List<ProductDto>()); // Pass an empty list on error
+                _logger.LogError($"Error retrieving product list: {ex.Message}");
+                return View(Enumerable.Empty<ProductDto>()); // Return an empty list on failure
             }
         }
 
-
-        // Privacy policy page
+        /// <summary>
+        /// Renders the privacy policy page.
+        /// </summary>
         public IActionResult Privacy()
         {
             return View();
         }
 
-        // Error handling
+        /// <summary>
+        /// Handles application errors by displaying an error page.
+        /// </summary>
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel
+            {
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            });
         }
 
+        /// <summary>
+        /// Searches products based on a user query.
+        /// </summary>
         [HttpGet]
-[Route("Home/Search")]
-public async Task<IActionResult> Search(string query)
-{
-    IEnumerable<ProductDto> products = null!;
-
-    try
-    {
-        // Get products from the service
-        products = await _productService.GetProductsAsync();
-
-        // Safely filter products based on the query
-        if (!string.IsNullOrEmpty(query))
+        [Route("Home/Search")]
+        public async Task<IActionResult> Search(string query)
         {
-            products = products
-                ?.Where(p => p?.Name?.Contains(query, StringComparison.OrdinalIgnoreCase) == true) // Null-safe
-                ?? Enumerable.Empty<ProductDto>();
+            IEnumerable<ProductDto> filteredProducts;
+
+            try
+            {
+                // Fetch all products
+                var products = await _productService.GetProductsAsync();
+
+                // Filter products safely using LINQ
+                filteredProducts = string.IsNullOrWhiteSpace(query)
+                    ? products
+                    : products.Where(p => p?.Name?.Contains(query, StringComparison.OrdinalIgnoreCase) == true);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning($"Search operation failed: {ex.Message}");
+                filteredProducts = Enumerable.Empty<ProductDto>();
+            }
+
+            // Check if the "Search" view exists before rendering
+            return ViewExists("Search") ? View(filteredProducts) : View("Error");
         }
-    }
-    catch (Exception ex)
-    {
-        _logger.LogWarning($"Failed to access product service: {ex.Message}");
-        products = Enumerable.Empty<ProductDto>(); // Fallback to an empty list
-    }
 
-    if (!ViewExists("Search"))
-    {
-        return View("Error");
-    }
-    
-    return View(products);
-}
-
-
-        // Utility method to check if a view exists
+        /// <summary>
+        /// Utility method to verify if a view exists within the current controller context.
+        /// </summary>
+        /// <param name="viewName">Name of the view to check.</param>
+        /// <returns>True if the view exists; otherwise, false.</returns>
         private bool ViewExists(string viewName)
         {
-            var result = _viewEngine.FindView(ControllerContext, viewName, false);
-            return result.View != null;
+            var viewResult = _viewEngine.FindView(ControllerContext, viewName, false);
+            return viewResult.View != null;
         }
     }
 }

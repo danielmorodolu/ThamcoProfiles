@@ -2,58 +2,61 @@
 @{
     ViewData["PageTitle"] = "Update Profile Field";
     ViewData["Controller"] = "Account";
-    ViewData["Action"] = "EditProfileField";
+    ViewData["Action"] = "EditField";
 }
 
 <!-- External Stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 <link rel="stylesheet" href="~/css/profile-edit.css" />
 
-<body>
-    <div class="content-wrapper py-5">
-        <div class="container">
-            <h3 class="mb-4">Update @ViewBag.Field</h3>
-            <form id="profileEditForm" asp-action="EditField">
-                <input type="hidden" name="fieldName" value="@ViewBag.Field" />
-                <div class="mb-3">
-                    <label for="inputField" class="form-label">@ViewBag.Field</label>
-                    
-                    @if (ViewBag.Field == "PaymentAddress")
-                    {
-                        <!-- Address Input with Google Autocomplete -->
-                        <input id="addressInput" type="text" class="form-control" name="newValue" value="@ViewBag.FieldValue" placeholder="Enter a new address" required />
-                        <small class="text-danger validation-message" style="display: none;"></small>
-                    }
-                    else if (ViewBag.Field == "PhoneNumber")
-                    {
-                        <!-- Phone Number Input with Validation -->
-                        <input id="phoneInput" type="tel" class="form-control" name="newValue" placeholder="Enter a new phone number" required />
-                        <small class="text-danger validation-message" style="display: none;"></small>
-                    }
-                    else
-                    {
-                        <!-- Generic Input for Other Fields -->
-                        <input id="genericInput" type="text" class="form-control" name="newValue" value="@ViewBag.FieldValue" placeholder="Enter a new value" required />
-                        <small class="text-danger validation-message" style="display: none;"></small>
-                    }
-                </div>
-                <div class="form-actions mt-4">
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
-                    <a asp-controller="Account" asp-action="Details" class="btn btn-secondary ms-2">Cancel</a>
-                </div>
-            </form>
+<div class="content-wrapper py-5">
+    <div class="container">
+        <h3 class="mb-4">Update @ViewBag.Field</h3>
+        <form id="profileEditForm" asp-action="EditField" method="post">
+            <input type="hidden" name="field" value="@ViewBag.Field" />
+
+            <div class="mb-3">
+                <label for="inputField" class="form-label">@ViewBag.Field</label>
+
+                @if (ViewBag.Field == "PaymentAddress")
+                {
+                    <!-- Address Input with Google Autocomplete -->
+                    <input id="addressInput" type="text" class="form-control" name="newValue" 
+                           value="@ViewBag.FieldValue" placeholder="Enter a new address" required />
+                }
+                else if (ViewBag.Field == "PhoneNumber")
+                {
+                    <!-- Phone Number Input with Validation -->
+                    <input id="phoneInput" type="tel" class="form-control" name="newValue" 
+                           value="@ViewBag.FieldValue" placeholder="Enter a new phone number" required />
+                }
+                else
+                {
+                    <!-- Generic Input for Other Fields -->
+                    <input id="genericInput" type="text" class="form-control" name="newValue" 
+                           value="@ViewBag.FieldValue" placeholder="Enter a new value" required />
+                }
+
+                <small class="text-danger validation-message" style="display: none;"></small>
+            </div>
+
+            <div class="form-actions mt-4">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <a asp-controller="Account" asp-action="Details" class="btn btn-secondary ms-2">Cancel</a>
+            </div>
+        </form>
+
+        <div class="navigation mt-4">
+            <a class="btn btn-outline-dark" asp-controller="Account" asp-action="Details">
+                <i class="bi bi-arrow-left"></i> Back to Details
+            </a>
         </div>
     </div>
+</div>
 
-    <div class="navigation mt-4">
-        <a class="btn btn-outline-dark" asp-controller="Account" asp-action="Details">
-            <i class="bi bi-arrow-left"></i> Back to Details
-        </a>
-    </div>
-</body>
-
-<!-- External JavaScript -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTCZn2kPp1MNnuohuihlYuk83f76EHMG8&libraries=places"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<!-- External Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTCZn2kPp1MNnuohuihlYuk83f76EHMG8&libraries=places"></script>
 <script src="~/js/profile-edit.js"></script>

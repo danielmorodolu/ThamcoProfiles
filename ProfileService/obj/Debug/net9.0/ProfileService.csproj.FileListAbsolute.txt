@@ -273,3 +273,5 @@
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/System.Formats.Asn1.dll
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/System.Text.Json.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/ProfileService.xml
+/Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/ProfileService.xml
