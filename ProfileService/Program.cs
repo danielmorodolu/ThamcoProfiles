@@ -42,7 +42,7 @@ builder.Services.AddDbContext<ProfileContext>(options =>
     }
     options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 });
-
+builder.Services.AddScoped<IProductService, ProductService>();
 // Configure conditional dependency injection
 if (builder.Environment.IsDevelopment())
 {
@@ -55,7 +55,8 @@ else
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 }
 
-builder.Services.AddScoped<IProfileService, ProfileService.Services.Profiling.RealProfileService>();
+builder.Services.AddScoped<IProfileService, RealProfileService>();
+
 
 
 builder.Services.Configure<CookiePolicyOptions>(options =>
