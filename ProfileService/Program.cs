@@ -17,6 +17,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IProfileService, RealProfileService>();
 
 // Configure database for development and deployment
 builder.Services.AddDbContext<ProfileContext>(options =>

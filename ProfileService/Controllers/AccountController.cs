@@ -46,20 +46,17 @@ namespace ProfileService.Controllers
         
 
         public async Task Logout()
-{
+    {
     try
     {
        // Sign out from Auth0 and the cookie scheme
         await HttpContext.SignOutAsync("Auth0");
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme, new AuthenticationProperties
-                {
-                    // Redirect to the home page after logout.
-                    RedirectUri = Url.Action("Index", "Home")
-                });
+        // Redirect to the home page after logout
+        var redirectUri = Url.Action("Index", "Home");
+        Response.Redirect(redirectUri);
 
-        // Optional: Redirect after sign-out
-        //Response.Redirect("/");
+       
     }
     catch (Exception ex)
     {
@@ -120,6 +117,7 @@ public async Task<IActionResult> Details()
                 }
 
                 ViewBag.Field = field;
+                
                 ViewBag.FieldValue = field switch
                 {
                     "FirstName" => user.FirstName ?? string.Empty,
@@ -146,6 +144,7 @@ public async Task<IActionResult> Details()
             {
                 var auth0UserId = Auth0UserHelper.GetAuth0UserId(User);
                 var user = await _profileService.GetUserByAuth0IdAsync(auth0UserId);
+                
 
                 if (user == null)
                 {

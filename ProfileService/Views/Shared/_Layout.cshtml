@@ -29,7 +29,8 @@
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
-
+                 @if (User.Identity != null && User.Identity.IsAuthenticated)
+                            {
                 <!-- Right-Side Icons (Cart and Profile) -->
                 <div class="d-flex align-items-center">
                     <!-- Cart Icon -->
@@ -46,15 +47,17 @@
                             <i class="bi bi-three-dots"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileMenuButton">
-                            <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Login">Home</a></li>
                             <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Details">My Account</a></li>
                             <li><a class="dropdown-item text-danger" asp-area="" asp-controller="Account" asp-action="Logout">Sign Out</a></li>
                         </ul>
                     </div>
                 </div>
+                } else {
+                    <a class="signin-btn nav-link text-dark btn btn-primary" asp-area="" asp-controller="Account" asp-action="Login">Sign In</a>
+                }
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <div class="container mt-5">
