@@ -1,19 +1,21 @@
 using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using ProfileService.Models;
-using ProfileService.Services.ProfileRepo;
-using BCrypt.Net;
+using ProfileService.Services.Profiling;
+using ProfileService.Services.Auth0;
+using System.Diagnostics;
+
 
 namespace ProfileService.Controllers
 {
-    [Authorize] // Ensure actions are restricted to authenticated users
+
     public class AccountController : Controller
     {
         private readonly IConfiguration _configuration;
@@ -27,7 +29,8 @@ namespace ProfileService.Controllers
             _logger = logger;
         }
 
-        // Enable login with Auth0
+        [Route("Account/Login")]
+
         public IActionResult Login()
         {
             try
@@ -40,26 +43,32 @@ namespace ProfileService.Controllers
                 return View("Error", new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
             }
         }
+        
 
-        // Handle user logout
         public async Task Logout()
-        {
-            try
-            {
-                await HttpContext.SignOutAsync("Auth0");
-                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-                await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme, new AuthenticationProperties
+{
+    try
+    {
+       // Sign out from Auth0 and the cookie scheme
+        await HttpContext.SignOutAsync("Auth0");
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme, new AuthenticationProperties
                 {
-                    RedirectUri = Url.Action("Index", "Home") // Redirect to home after logout
+                    // Redirect to the home page after logout.
+                    RedirectUri = Url.Action("Index", "Home")
                 });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error in Logout: {ex.Message}");
-            }
-        }
 
-        /[Authorize]
+        // Optional: Redirect after sign-out
+        //Response.Redirect("/");
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError($"Error in Logout: {ex.Message}");
+    }
+}
+
+[Authorize]
+[HttpGet]
 public async Task<IActionResult> Details()
 {
     try
@@ -69,10 +78,10 @@ public async Task<IActionResult> Details()
 
         if (user == null)
         {
-            return NotFound(); // 404 if the user is not found
+            return NotFound();
         }
 
-        return View(user); // Return the "Details" view
+        return View(user);
     }
     catch (Exception ex)
     {
@@ -193,7 +202,7 @@ public async Task<IActionResult> Details()
 
                 if (user != null)
                 {
-                    await _profileService.DeleteUser(user);
+                    //await _profileService.DeleteUser(user);
                     await _profileService.SaveChangesAsync();
                 }
 
@@ -206,15 +215,17 @@ public async Task<IActionResult> Details()
             }
         }
 
+        // Check if a user exists
         private bool UserExists(int id)
         {
             return _profileService.UserExists(id);
         }
-    }
-    [HttpGet]
-public IActionResult Test()
-{
-    return Ok("AccountController is working");
-}
 
+        // Test route to check if the controller works
+        [HttpGet]
+        public IActionResult Test()
+        {
+            return Ok("AccountController is working");
+        }
+    }
 }

@@ -2,10 +2,11 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-using ProfileService.Data;
-using ProfileService.Services.Products;
 using Polly;
 using Polly.Extensions.Http;
+using ProfileService.Data;
+using ProfileService.Services.Products;
+using ProfileService.Services.Profiling;
 using System.Net.Http;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,47 +14,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IProductService, FakeProductService>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
-})
-.AddCookie()
-.AddOpenIdConnect("Auth0", options =>
-{
-    options.Authority = $"https://{builder.Configuration["Auth0:Domain"]}";
-    options.ClientId = builder.Configuration["Auth0:ClientId"];
-    options.ClientSecret = builder.Configuration["Auth0:ClientSecret"];
-    options.ResponseType = OpenIdConnectResponseType.Code;
-    options.SaveTokens = true; 
 
-    options.Scope.Clear();
-    options.Scope.Add("openid");
-    options.Scope.Add("profile");
-    options.Scope.Add("email");
-
-    options.CallbackPath = new PathString("/callback");
-    options.ClaimsIssuer = "Auth0";
-
-        options.SaveTokens = true;
-
-    options.Events = new OpenIdConnectEvents
-    {
-        OnRedirectToIdentityProviderForSignOut = context =>
-        {
-            var logoutUri = $"https://{builder.Configuration["Auth0:Domain"]}/v2/logout?client_id={builder.Configuration["Auth0:ClientId"]}";
-            context.Response.Redirect(logoutUri);
-            context.HandleResponse();
-
-            return Task.CompletedTask;
-        }
-    };
-});  
-
+// Configure database for development and deployment
 builder.Services.AddDbContext<ProfileContext>(options =>
 {
     if (builder.Environment.IsDevelopment())
@@ -67,55 +32,93 @@ builder.Services.AddDbContext<ProfileContext>(options =>
     }
     else
     {
-         var cs = builder.Configuration.GetConnectionString("ProfileContext");
-        options.UseSqlServer(cs, sqlServerOptionsAction: sqlOptions =>
-            sqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
-                maxRetryDelay: TimeSpan.FromSeconds(6),
-                errorNumbersToAdd: null
-            )
-        );
+        var connectionString = builder.Configuration.GetConnectionString("ProfileContext");
+        options.UseSqlServer(connectionString, sqlOptions =>
+        {
+            sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(6), errorNumbersToAdd: null);
+        });
     }
 });
-builder.Services.AddAuthorization();
 
-if(builder.Environment.IsDevelopment()){
+// Configure conditional dependency injection
+if (builder.Environment.IsDevelopment())
+{
     builder.Services.AddSingleton<IProductService, FakeProductService>();
-    
 }
-else {
-
-   builder.Services.AddHttpClient<IProductService, ProductService>()
-                    .AddPolicyHandler(GetRetryPolicy())
-                    .AddPolicyHandler(GetCircuitBreakerPolicy());
-
-    
+else
+{
+    builder.Services.AddHttpClient<IProductService, ProductService>()
+        .AddPolicyHandler(GetRetryPolicy())
+        .AddPolicyHandler(GetCircuitBreakerPolicy());
 }
+
+builder.Services.AddScoped<IProfileService, ProfileService.Services.Profiling.RealProfileService>();
+
+// Configure authentication
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+})
+.AddCookie()
+.AddOpenIdConnect("Auth0", options =>
+{
+    options.Authority = $"https://{builder.Configuration["Auth0:Domain"]}";
+    options.ClientId = builder.Configuration["Auth0:ClientId"];
+    options.ClientSecret = builder.Configuration["Auth0:ClientSecret"];
+    options.ResponseType = OpenIdConnectResponseType.Code;
+    options.SaveTokens = true;
+
+    options.Scope.Clear();
+    options.Scope.Add("openid");
+    options.Scope.Add("profile");
+    options.Scope.Add("email");
+
+    options.CallbackPath = new PathString("/callback");
+    options.ClaimsIssuer = "Auth0";
+
+    options.Events = new OpenIdConnectEvents
+    {
+        OnRedirectToIdentityProviderForSignOut = context =>
+        {
+            var logoutUri = $"https://{builder.Configuration["Auth0:Domain"]}/v2/logout?client_id={builder.Configuration["Auth0:ClientId"]}";
+            context.Response.Redirect(logoutUri);
+            context.HandleResponse();
+
+            return Task.CompletedTask;
+        }
+    };
+});
+
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure middleware pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+}
+builder.Logging.AddConsole();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
-
 app.UseAuthentication();
-
 app.UseAuthorization();
-
-app.MapStaticAssets();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
 

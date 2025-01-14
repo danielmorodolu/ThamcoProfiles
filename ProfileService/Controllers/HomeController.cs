@@ -38,37 +38,6 @@ namespace ProfileService.Controllers
             }
         }
 
-        // Login action
-        public IActionResult Login()
-        {
-            try
-            {
-                return Challenge(new AuthenticationProperties { RedirectUri = "/" }, "Auth0");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error in Login: {ex.Message}");
-                return View("Error", new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-            }
-        }
-
-        // Logout action
-        public async Task Logout()
-        {
-            try
-            {
-                await HttpContext.SignOutAsync("Auth0");
-                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-                await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme, new AuthenticationProperties
-                {
-                    RedirectUri = Url.Action("Index", "Home") // Redirect to the homepage after logout
-                });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error in Logout: {ex.Message}");
-            }
-        }
 
         // Privacy policy page
         public IActionResult Privacy()

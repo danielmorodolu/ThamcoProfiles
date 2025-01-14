@@ -1,20 +1,25 @@
 using System;
-
-namespace ProfileService.Services.Products;
-
-public class FakeProductService : IProductService
+using System.Collections.Generic;
+using System.Threading.Tasks;
+namespace ProfileService.Services.Products
 {
-
-    private readonly ProductDto[]  _products =
+    public class FakeProductService : IProductService
     {
-    new ProductDto  {Id = 1, Name = "Fake product A" },
-    new ProductDto { Id = 2, Name = "Fake product B" },
-    new ProductDto {Id = 3, Name = "Fake product C"}
-    };
+        private readonly List<ProductDto> _products;
 
-    public Task<IEnumerable<ProductDto>> GetProductsAsync()
-    {
-        var products = _products.AsEnumerable();
-        return Task.FromResult(products);
+        public FakeProductService()
+        {
+            _products = new List<ProductDto>
+            {
+                new ProductDto { Id = 1, Name = "Product A", Description = "Description A", Price = 10.99m },
+                new ProductDto { Id = 2, Name = "Product B", Description = "Description B", Price = 15.49m },
+                new ProductDto { Id = 3, Name = "Product C", Description = "Description C", Price = 7.99m }
+            };
+        }
+
+        public Task<IEnumerable<ProductDto>> GetProductsAsync()
+        {
+            return Task.FromResult<IEnumerable<ProductDto>>(_products);
+        }
     }
 }
