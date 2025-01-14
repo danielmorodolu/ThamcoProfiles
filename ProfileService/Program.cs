@@ -58,7 +58,11 @@ else
 builder.Services.AddScoped<IProfileService, ProfileService.Services.Profiling.RealProfileService>();
 
 
-
+builder.Services.Configure<CookiePolicyOptions>(options =>
+{
+    options.MinimumSameSitePolicy = SameSiteMode.None;
+    options.Secure = CookieSecurePolicy.Always;
+});
 
 // Configure authentication
 builder.Services.AddAuthentication(options =>
@@ -102,18 +106,9 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-//builder.WebHost.UseUrls("http://0.0.0.0:8080");
+
 builder.Services.AddAuthorization();
 
-if (!builder.Environment.IsDevelopment()){
-builder.Services.AddHttpsRedirection(options =>
-{
-    options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
-    options.HttpsPort = 8080; // Match your port configuration
-    // Update the URL to bind to port 7285
-builder.WebHost.UseUrls("http://0.0.0.0:8080");
-});
-}
 
 var app = builder.Build();
 
