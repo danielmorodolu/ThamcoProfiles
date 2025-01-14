@@ -262,3 +262,14 @@
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/a44773/ThamcoProfiles/ProfileService/obj/Debug/net9.0/ProfileService.MvcApplicationPartsAssemblyInfo.cs
 /Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Logging.AzureAppServices.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/System.Formats.Asn1.dll
+/Users/a44773/ThamcoProfiles/ProfileService/bin/Debug/net9.0/System.Text.Json.dll

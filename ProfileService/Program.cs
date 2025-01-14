@@ -22,7 +22,7 @@ builder.Services.AddScoped<IProfileService, RealProfileService>();
 // Configure database for development and deployment
 builder.Services.AddDbContext<ProfileContext>(options =>
 {
-    if (builder.Environment.IsDevelopment())
+   /*if (builder.Environment.IsDevelopment())
     {
         // Use SQLite for development
         var folder = Environment.SpecialFolder.LocalApplicationData;
@@ -32,15 +32,15 @@ builder.Services.AddDbContext<ProfileContext>(options =>
         options.EnableDetailedErrors();
         options.EnableSensitiveDataLogging();
     }
-    else
-    {
+    else{*/
+    
         // Use SQL Server for production
         var connectionString = builder.Configuration.GetConnectionString("ProfileContext");
         options.UseSqlServer(connectionString, sqlOptions =>
         {
             sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(6), errorNumbersToAdd: null);
         });
-    }
+  // }
     options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 });
 

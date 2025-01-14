@@ -78,6 +78,7 @@ public async Task<IActionResult> Details()
 
                     user = new Profile
                     {
+                        Id = 1,
                         Email = userEmail ?? "",
                         Auth0UserId = auth0UserId,
                         Password = "Auth0PasswordSetHere", // You can handle password reset with Auth0

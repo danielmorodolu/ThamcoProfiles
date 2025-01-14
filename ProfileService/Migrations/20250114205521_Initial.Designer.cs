@@ -10,8 +10,8 @@ using ProfileService.Data;
 namespace ProfileService.Migrations
 {
     [DbContext(typeof(ProfileContext))]
-    [Migration("20250114135500_UpdateProfileEntity")]
-    partial class UpdateProfileEntity
+    [Migration("20250114205521_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

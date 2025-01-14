@@ -5,13 +5,13 @@
 namespace ProfileService.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Profiles",
+                name: "Profile",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -26,7 +26,7 @@ namespace ProfileService.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Profiles", x => x.Id);
+                    table.PrimaryKey("PK_Profile", x => x.Id);
                 });
         }
 
@@ -34,7 +34,7 @@ namespace ProfileService.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Profiles");
+                name: "Profile");
         }
     }
 }
