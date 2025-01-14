@@ -20,6 +20,10 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '9.x'
+      
+      - name: Install dependencies
+        run: dotnet restore
+
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
