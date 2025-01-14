@@ -8,6 +8,7 @@ using ProfileService.Data;
 using ProfileService.Services.Products;
 using ProfileService.Services.Profiling;
 using System.Net.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +40,7 @@ builder.Services.AddDbContext<ProfileContext>(options =>
             sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(6), errorNumbersToAdd: null);
         });
     }
+    options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 });
 
 // Configure conditional dependency injection
@@ -116,6 +118,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
