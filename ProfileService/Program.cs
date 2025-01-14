@@ -29,6 +29,7 @@ builder.Services.AddDbContext<ProfileContext>(options =>
         options.UseSqlite($"Data Source={dbPath}");
         options.EnableDetailedErrors();
         options.EnableSensitiveDataLogging();
+        
     }
     else
     {
@@ -59,7 +60,7 @@ builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = "Auth0";
 })
 .AddCookie()
 .AddOpenIdConnect("Auth0", options =>
@@ -67,15 +68,14 @@ builder.Services.AddAuthentication(options =>
     options.Authority = $"https://{builder.Configuration["Auth0:Domain"]}";
     options.ClientId = builder.Configuration["Auth0:ClientId"];
     options.ClientSecret = builder.Configuration["Auth0:ClientSecret"];
-    options.ResponseType = OpenIdConnectResponseType.Code;
+   options.ResponseType = "code";
+    options.CallbackPath = new PathString("/callback");
     options.SaveTokens = true;
 
     options.Scope.Clear();
     options.Scope.Add("openid");
     options.Scope.Add("profile");
     options.Scope.Add("email");
-
-    options.CallbackPath = new PathString("/callback");
     options.ClaimsIssuer = "Auth0";
 
     options.Events = new OpenIdConnectEvents
@@ -83,6 +83,12 @@ builder.Services.AddAuthentication(options =>
         OnRedirectToIdentityProviderForSignOut = context =>
         {
             var logoutUri = $"https://{builder.Configuration["Auth0:Domain"]}/v2/logout?client_id={builder.Configuration["Auth0:ClientId"]}";
+            var postLogoutUri = context.Properties.RedirectUri;
+            if (!string.IsNullOrEmpty(postLogoutUri))
+            {
+                logoutUri += $"&returnTo={Uri.EscapeDataString(postLogoutUri)}";
+            }
+
             context.Response.Redirect(logoutUri);
             context.HandleResponse();
 
@@ -90,6 +96,7 @@ builder.Services.AddAuthentication(options =>
         }
     };
 });
+
 
 builder.Services.AddAuthorization();
 
