@@ -78,7 +78,7 @@ namespace ProfileService.Services.Products
                 var accessToken = await GetAccessTokenAsync();
                 _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
-                var response = await _client.GetAsync("/api/products");
+                var response = await _client.GetAsync("/api/product/Products");
                 response.EnsureSuccessStatusCode();
 
                 var responseBody = await response.Content.ReadAsStringAsync();
