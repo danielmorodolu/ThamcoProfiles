@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProfileService</a>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
 
             <!-- Toggle Button for Mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,10 +34,10 @@
                 <!-- Right-Side Icons (Cart and Profile) -->
                 <div class="d-flex align-items-center">
                     <!-- Cart Icon -->
-                    <a class="btn btn-light position-relative me-3" asp-area="" asp-controller="Cart" asp-action="Index" aria-label="View Cart">
+                    <a class="btn btn-light position-relative me-3" asp-area="" asp-controller="Home" asp-action="Index" aria-label="View Cart">
                         <i class="bi bi-cart"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            @ViewBag.CartCount ?? 0
+                            @ViewBag.CartCount
                         </span>
                     </a>
 
@@ -65,7 +65,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center text-muted py-3 mt-5 border-top">
+    <footer class="text-center text-muted py-3 mt-5 border-down">
         &copy; 2025 - ProfileService - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-primary">Privacy Policy</a>
     </footer>
 
