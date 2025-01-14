@@ -105,20 +105,20 @@ builder.Services.AddAuthentication(options =>
 //builder.WebHost.UseUrls("http://0.0.0.0:8080");
 builder.Services.AddAuthorization();
 
-var app = builder.Build();
-
-app.MapControllers();
-// Remove this line and move it to the end of the file
-
-
-if (!app.Environment.IsDevelopment()){
+if (!builder.Environment.IsDevelopment()){
 builder.Services.AddHttpsRedirection(options =>
 {
     options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
     options.HttpsPort = 7285; // Match your port configuration
 });
-app.UseHttpsRedirection();
 }
+
+var app = builder.Build();
+
+app.MapControllers();
+app.UseHttpsRedirection();
+
+
 
 
 // Configure middleware pipeline
