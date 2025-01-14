@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using ProfileService.Models;
 using ProfileService.Data;
 
+
 namespace ProfileService.Services.Profiling
 {
 public class RealProfileService : IProfileService
@@ -15,17 +16,17 @@ public class RealProfileService : IProfileService
 
     public async Task<Profile?> GetUserByIdAsync(int? id)
     {
-        return await _context.Profiles.FindAsync(id);
+        return await _context.Profile.FindAsync(id);
     }
 
     public async Task AddUserAsync(Profile user)
     {
-        await _context.Profiles.AddAsync(user);
+        await _context.Profile.AddAsync(user);
     }
 
     public async Task<bool> UpdateUser(Profile user)
     {
-        var existingUser = await _context.Profiles.FindAsync(user.Id);
+        var existingUser = await _context.Profile.FindAsync(user.Id);
         if (existingUser == null) return false;
 
         existingUser.FirstName = user.FirstName;
@@ -39,7 +40,7 @@ public class RealProfileService : IProfileService
 
     public bool UserExists(int id)
     {
-        return _context.Profiles.Any(p => p.Id == id);
+        return _context.Profile.Any(p => p.Id == id);
     }
 
     public async Task SaveChangesAsync()
@@ -49,7 +50,7 @@ public class RealProfileService : IProfileService
 
     public async Task<Profile?> GetUserByAuth0IdAsync(string? id)
     {
-        return await _context.Profiles.FirstOrDefaultAsync(p => p.Auth0UserId == id);
+        return await _context.Profile.FirstOrDefaultAsync(p => p.Auth0UserId == id);
     }}
     
     }

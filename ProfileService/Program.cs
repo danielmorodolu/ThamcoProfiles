@@ -52,12 +52,9 @@ if (builder.Environment.IsDevelopment())
 else
 {
     // Use ProductService with HttpClient in production
-    builder.Services.AddHttpClient<IProductService, ProductService>(client =>
-    {
-        client.BaseAddress = new Uri(builder.Configuration["ProductService:BaseUrl"]);
-    })
-    .AddPolicyHandler(GetRetryPolicy())
-    .AddPolicyHandler(GetCircuitBreakerPolicy());
+    builder.Services.AddHttpClient<IProductService, ProductService>()
+        .AddPolicyHandler(GetRetryPolicy())
+        .AddPolicyHandler(GetCircuitBreakerPolicy());
 }
 
 // Configure the real profile service

@@ -10,21 +10,11 @@ namespace ProfileService.Data
 {
     public class ProfileContext : DbContext
     {
-        public ProfileContext(DbContextOptions<ProfileContext> options) : base(options)
-        {
-        }
-
-        public required DbSet<Profile> Profiles { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder
-                .EnableSensitiveDataLogging() // Keep only during development
-                .ConfigureWarnings(warnings =>
+                public ProfileContext(DbContextOptions<ProfileContext> options)
+                    : base(options)
                 {
-                    warnings.Ignore(RelationalEventId.PendingModelChangesWarning);
-                });
+                
+                }
+                public DbSet<ProfileService.Models.Profile> Profile { get; set; } = default!;
+            }
         }
-    }
-}
-
-
