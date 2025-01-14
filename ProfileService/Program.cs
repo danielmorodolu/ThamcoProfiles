@@ -57,8 +57,6 @@ else
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 }
 
-// Configure the real profile service
-builder.Services.AddScoped<IProfileService, RealProfileService>();
 
 // Configure cookie policy
 builder.Services.Configure<CookiePolicyOptions>(options =>

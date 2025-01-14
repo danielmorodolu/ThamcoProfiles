@@ -18,7 +18,7 @@ public class ProductService : IProductService
         {
             _configuration = configuration;
             
-            var baseUrl = _configuration["WebServices:ProductService:ProductURL"] ?? "";
+            var baseUrl = _configuration["WebServices:Products:BASEURL"] ?? "";
             client.BaseAddress = new System.Uri(baseUrl);
             client.Timeout = TimeSpan.FromSeconds(20);
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -56,7 +56,7 @@ public class ProductService : IProductService
         public async Task<IEnumerable<ProductDto>> GetProductsAsync()
         {
             try{
-            var uri = "api/product/Undercutters";
+            var uri = "api/product/Products";
             var accessToken = await GetAccessTokenAsync();
 
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
@@ -73,19 +73,6 @@ public class ProductService : IProductService
                 // Return an empty list or rethrow as needed
                 return Enumerable.Empty<ProductDto>();
             }
-            catch (TaskCanceledException taskEx)
-            {
-                // Handle timeout-related exceptions (if any)
-                Console.WriteLine($"Task was canceled: {taskEx.Message}");
-                // Return an empty list or handle timeout accordingly
-                return Enumerable.Empty<ProductDto>();
-            }
-            catch (Exception ex)
-            {
-                // Handle other general exceptions
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                // Return an empty list or handle the exception in some other way
-                return Enumerable.Empty<ProductDto>();
-            }
+            
         }
 }
