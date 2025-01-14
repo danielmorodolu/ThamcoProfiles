@@ -19,7 +19,7 @@ namespace ProfileService.Services.Products
 
         public async Task<IEnumerable<ProductDto>> GetProductsAsync()
         {
-            var response = await _httpClient.GetAsync("api/products");
+            var response = await _httpClient.GetAsync("api/product/Products");
             response.EnsureSuccessStatusCode();
 
             var jsonString = await response.Content.ReadAsStringAsync();
