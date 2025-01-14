@@ -34,7 +34,7 @@ builder.Services.AddDbContext<ProfileContext>(options =>
         options.EnableSensitiveDataLogging();
     }
     else
-    {*/
+    {
         // SQL Server configuration for Production
         var connectionString = builder.Configuration.GetConnectionString("ProfileContext");
         options.UseSqlServer(connectionString, sqlOptions =>
