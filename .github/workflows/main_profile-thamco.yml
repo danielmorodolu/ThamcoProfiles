@@ -21,13 +21,15 @@ jobs:
         with:
           dotnet-version: '9.x'
 
+      - name: Restore dependencies
+        run: dotnet restore
+  
       - name: Build with dotnet
         run: dotnet build --configuration Release
-
-      - name: Test
+  
+      - name: Test with dotnet
         run: dotnet test --configuration Release --no-build --verbosity normal
-
-
+  
       - name: dotnet publish
         run: dotnet publish ProfileService -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
