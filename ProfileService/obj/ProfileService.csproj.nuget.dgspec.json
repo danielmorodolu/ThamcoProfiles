@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[9.0.1, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -73,6 +77,10 @@
             "Microsoft.Extensions.Logging.AzureAppServices": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -93,6 +101,10 @@
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
             }
           },
           "imports": [
