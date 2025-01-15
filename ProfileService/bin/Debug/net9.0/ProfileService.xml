@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProfileService</name>
+    </assembly>
+    <members>
+        <member name="T:ProfileService.Controllers.AccountController">
+            <summary>
+            Controller for managing user account-related operations.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.AccountController.Login">
+            <summary>
+            Initiates the login process using Auth0.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.AccountController.Logout">
+            <summary>
+            Logs out the user and redirects to the home page.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.AccountController.Details">
+            <summary>
+            Fetches and displays user profile details.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.AccountController.EditField(System.String)">
+            <summary>
+            Displays the edit field form.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.AccountController.EditField(System.String,System.String)">
+            <summary>
+            Saves updates to a user profile field.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.AccountController.Delete">
+            <summary>
+            Confirms account deletion.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.AccountController.DeleteConfirmed">
+            <summary>
+            Deletes the account and redirects to logout.
+            </summary>
+        </member>
+        <member name="T:ProfileService.Controllers.HomeController">
+            <summary>
+            HomeController manages the main application logic, including the homepage, privacy policy, and error handling.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{ProfileService.Controllers.HomeController},ProfileService.Services.Products.IProductService,Microsoft.AspNetCore.Mvc.ViewEngines.ICompositeViewEngine)">
+            <summary>
+            Constructor initializes logger, product service, and view engine dependencies.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.HomeController.Index">
+            <summary>
+            Displays the homepage with a list of products.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.HomeController.Privacy">
+            <summary>
+            Renders the privacy policy page.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.HomeController.Error">
+            <summary>
+            Handles application errors by displaying an error page.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.HomeController.Search(System.String)">
+            <summary>
+            Searches products based on a user query.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Controllers.HomeController.ViewExists(System.String)">
+            <summary>
+            Utility method to verify if a view exists within the current controller context.
+            </summary>
+            <param name="viewName">Name of the view to check.</param>
+            <returns>True if the view exists; otherwise, false.</returns>
+        </member>
+        <member name="T:ProfileService.Data.ProfileContext">
+            <summary>
+            The database context for managing profiles.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Data.ProfileContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{ProfileService.Data.ProfileContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProfileService.Data.ProfileContext"/> class.
+            </summary>
+            <param name="options">Options for configuring the context.</param>
+        </member>
+        <member name="P:ProfileService.Data.ProfileContext.Profile">
+            <summary>
+            Gets or sets the profiles in the database.
+            </summary>
+        </member>
+        <member name="T:ProfileService.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:ProfileService.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ProfileService.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ProfileService.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ProfileService.Models.ErrorViewModel">
+            <summary>
+            Represents the error details to be displayed in the application views.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Models.ErrorViewModel.RequestId">
+            <summary>
+            Gets or sets the unique identifier for the request where the error occurred.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            Gets a value indicating whether the RequestId should be shown.
+            </summary>
+            <remarks>
+            This property evaluates whether the <see cref="P:ProfileService.Models.ErrorViewModel.RequestId"/> is null or empty.
+            </remarks>
+        </member>
+        <member name="T:ProfileService.Models.Profile">
+            <summary>
+            Represents a user profile in the system.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Models.Profile.Id">
+            <summary>
+            Gets or sets the unique identifier for the profile.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Models.Profile.FirstName">
+            <summary>
+            Gets or sets the first name of the user.
+            </summary>
+            <remarks>
+            The first name must be between 2 and 50 characters.
+            </remarks>
+        </member>
+        <member name="P:ProfileService.Models.Profile.LastName">
+            <summary>
+            Gets or sets the last name of the user.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Models.Profile.Email">
+            <summary>
+            Gets or sets the email address of the user. This field is required.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Models.Profile.PaymentAddress">
+            <summary>
+            Gets or sets the payment address of the user.
+            </summary>
+            <remarks>
+            The address must be up to 500 characters long.
+            </remarks>
+        </member>
+        <member name="P:ProfileService.Models.Profile.Password">
+            <summary>
+            Gets or sets the password for the user. This field is required.
+            </summary>
+            <remarks>
+            The password must be between 8 and 100 characters and include at least:
+            one uppercase letter, one lowercase letter, one number, and one special character.
+            </remarks>
+        </member>
+        <member name="P:ProfileService.Models.Profile.PhoneNumber">
+            <summary>
+            Gets or sets the phone number of the user.
+            </summary>
+            <remarks>
+            The phone number must be in international format (e.g., +1234567890).
+            </remarks>
+        </member>
+        <member name="P:ProfileService.Models.Profile.Auth0UserId">
+            <summary>
+            Gets or sets the Auth0 user ID for the user.
+            </summary>
+        </member>
+        <member name="T:ProfileService.Services.Auth0.Auth0UserHelper">
+            <summary>
+            A helper class for extracting Auth0-related claims from a user's principal.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Services.Auth0.Auth0UserHelper.GetAuth0UserId(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            Retrieves the Auth0 User ID from the claims of a given user.
+            </summary>
+            <param name="user">The <see cref="T:System.Security.Claims.ClaimsPrincipal"/> representing the authenticated user.</param>
+            <returns>
+            A string representing the Auth0 User ID if found; otherwise, <c>null</c>.
+            </returns>
+        </member>
+        <member name="M:ProfileService.Services.Auth0.Auth0UserHelper.GetEmail(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            Retrieves the email address from the claims of a given user.
+            </summary>
+            <param name="user">The <see cref="T:System.Security.Claims.ClaimsPrincipal"/> representing the authenticated user.</param>
+            <returns>
+            A string representing the email address if found; otherwise, <c>null</c>.
+            </returns>
+        </member>
+        <member name="T:ProfileService.Services.Products.FakeProductService">
+            <summary>
+            A mock implementation of the <see cref="T:ProfileService.Services.Products.IProductService"/> interface, used for testing or development purposes.
+            </summary>
+        </member>
+        <member name="F:ProfileService.Services.Products.FakeProductService._products">
+            <summary>
+            A predefined list of products for simulation purposes.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Services.Products.FakeProductService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProfileService.Services.Products.FakeProductService"/> class with a predefined list of products.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Services.Products.FakeProductService.GetProductsAsync">
+            <summary>
+            Asynchronously retrieves the list of predefined products.
+            </summary>
+            <returns>
+            A task that represents the asynchronous operation. The task result contains an <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:ProfileService.Services.Products.ProductDto"/>.
+            </returns>
+        </member>
+        <member name="T:ProfileService.Services.Products.IProductService">
+            <summary>
+            Defines the contract for product-related operations.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Services.Products.IProductService.GetProductsAsync">
+            <summary>
+            Asynchronously retrieves a collection of products.
+            </summary>
+            <returns>
+            A task representing the asynchronous operation. The task result contains an <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:ProfileService.Services.Products.ProductDto"/>.
+            </returns>
+        </member>
+        <member name="T:ProfileService.Services.Products.ProductDto">
+            <summary>
+            Represents a product with detailed information including identifiers, descriptions, price, and availability.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.Id">
+            <summary>
+            Gets or sets the unique identifier for the product.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.Ean">
+            <summary>
+            Gets or sets the European Article Number (EAN) for the product.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.CategoryId">
+            <summary>
+            Gets or sets the unique identifier for the category of the product.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.CategoryName">
+            <summary>
+            Gets or sets the name of the category the product belongs to.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.BrandId">
+            <summary>
+            Gets or sets the unique identifier for the brand of the product.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.BrandName">
+            <summary>
+            Gets or sets the name of the brand associated with the product.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.Description">
+            <summary>
+            Gets or sets the description of the product.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.Name">
+            <summary>
+            Gets or sets the name of the product.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.Price">
+            <summary>
+            Gets or sets the price of the product.
+            </summary>
+        </member>
+        <member name="P:ProfileService.Services.Products.ProductDto.InStock">
+            <summary>
+            Gets or sets a value indicating whether the product is in stock.
+            </summary>
+        </member>
+        <member name="T:ProfileService.Services.Products.ProductService">
+            <summary>
+            Service for interacting with the product API to fetch product details.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Services.Products.ProductService.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProfileService.Services.Products.ProductService"/> class.
+            Configures the HTTP client with base settings for communicating with the product API.
+            </summary>
+            <param name="client">An instance of <see cref="T:System.Net.Http.HttpClient"/> to perform HTTP operations.</param>
+            <param name="configuration">The application configuration for retrieving API-related settings.</param>
+        </member>
+        <member name="M:ProfileService.Services.Products.ProductService.GetAccessTokenAsync">
+            <summary>
+            Asynchronously retrieves an access token for authenticating API requests.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, containing the access token as a string.</returns>
+        </member>
+        <member name="M:ProfileService.Services.Products.ProductService.GetProductsAsync">
+            <summary>
+            Asynchronously retrieves a collection of products from the API.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, containing a list of products.</returns>
+        </member>
+        <member name="T:ProfileService.Services.Profiling.IProfileService">
+            <summary>
+            Interface defining the contract for profile management operations.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.IProfileService.GetUserByIdAsync(System.Nullable{System.Int32})">
+            <summary>
+            Retrieves a user profile by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the user profile.</param>
+            <returns>
+            A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, containing the user profile if found; otherwise, <c>null</c>.
+            </returns>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.IProfileService.AddUserAsync(ProfileService.Models.Profile)">
+            <summary>
+            Adds a new user profile to the database.
+            </summary>
+            <param name="user">The user profile to be added.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.IProfileService.UpdateUser(ProfileService.Models.Profile)">
+            <summary>
+            Updates an existing user profile in the database.
+            </summary>
+            <param name="user">The user profile containing updated information.</param>
+            <returns>
+            A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, returning <c>true</c> if the update was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.IProfileService.UserExists(System.Int32)">
+            <summary>
+            Checks if a user profile exists in the database based on its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the user profile.</param>
+            <returns><c>true</c> if the user exists; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.IProfileService.SaveChangesAsync">
+            <summary>
+            Persists all pending changes to the database.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.IProfileService.GetUserByAuth0IdAsync(System.String)">
+            <summary>
+            Retrieves a user profile by its Auth0 unique identifier.
+            </summary>
+            <param name="id">The Auth0 unique identifier of the user profile.</param>
+            <returns>
+            A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, containing the user profile if found; otherwise, <c>null</c>.
+            </returns>
+        </member>
+        <member name="T:ProfileService.Services.Profiling.RealProfileService">
+            <summary>
+            Service implementation for managing user profiles using Entity Framework.
+            </summary>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.RealProfileService.#ctor(ProfileService.Data.ProfileContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProfileService.Services.Profiling.RealProfileService"/> class.
+            </summary>
+            <param name="context">The database context for accessing profile data.</param>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.RealProfileService.GetUserByIdAsync(System.Nullable{System.Int32})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.RealProfileService.AddUserAsync(ProfileService.Models.Profile)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.RealProfileService.UpdateUser(ProfileService.Models.Profile)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.RealProfileService.UserExists(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.RealProfileService.SaveChangesAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:ProfileService.Services.Profiling.RealProfileService.GetUserByAuth0IdAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ThamcoProfiles.Services.Support.SameSiteServiceCollectionExtensions">
+            <summary>
+            Extension methods for configuring SameSite cookie handling.
+            </summary>
+        </member>
+        <member name="M:ThamcoProfiles.Services.Support.SameSiteServiceCollectionExtensions.ConfigureSameSiteNoneCookies(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures the application to properly handle SameSite=None cookies 
+            by ensuring compatibility with clients that do not fully support this mode.
+            </summary>
+            <param name="services">The IServiceCollection to add the configuration to.</param>
+            <returns>The updated IServiceCollection.</returns>
+        </member>
+        <member name="M:ThamcoProfiles.Services.Support.SameSiteServiceCollectionExtensions.CheckSameSite(Microsoft.AspNetCore.Http.CookieOptions)">
+            <summary>
+            Checks and adjusts the SameSite property for cookies to ensure compatibility with 
+            browsers that may not handle SameSite=None correctly when Secure is not enabled.
+            </summary>
+            <param name="options">The cookie options to inspect and modify.</param>
+        </member>
+    </members>
+</doc>
