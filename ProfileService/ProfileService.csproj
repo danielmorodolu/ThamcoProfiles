@@ -36,7 +36,7 @@
 
     <!-- API Documentation -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
-    <PackageReference Include="xunit" Version="2.9.3" />
+    
   </ItemGroup>
 
 </Project>
